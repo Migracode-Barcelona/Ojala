@@ -24,9 +24,9 @@ Before you begin, ensure you have met the following requirements:
    ```bash
    git clone https://github.com/armincano/ojala-website.git
    ```
-2. Navigate to the project directory:
+2. Navigate to the project directory, then:
    ```bash
-   cd ojala-website
+   cd client/ojala-website-react
    ```
 3. Install project dependencies:
    ```bash
@@ -36,7 +36,7 @@ Before you begin, ensure you have met the following requirements:
 ### Usage
 To start the development server and view the landing page, run the following command:
   ```bash
-   npm install
+   npm start
    ```
 
 ## Contributing Guidelines
