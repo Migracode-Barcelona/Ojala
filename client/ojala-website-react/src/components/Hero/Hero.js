@@ -5,7 +5,7 @@ function Hero() {
 	return (
 		<Container fluid>
 			<hr></hr>
-			<h1 className="display-1">Hero Component</h1>
+			<h1 className="display-1">Use your native language<br></br>to learn Spanish</h1>
 		</Container>
 	);
 }
