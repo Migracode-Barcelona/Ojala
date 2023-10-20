@@ -8,7 +8,6 @@ import user1 from "assets/Arabic-Card.png";
 import user2 from "assets/Darija-Card.png";
 import user3 from "assets/English-Card.png";
 import user4 from "assets/French-Card.png";
-import user5 from "assets/Spanish-Card.png";
 import user6 from "assets/Wolof-Card.png";
 
 function Cards() {

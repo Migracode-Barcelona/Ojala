@@ -7,18 +7,17 @@ import Image from "react-bootstrap/Image";
 import appPhoneMockup from "assets/ojala_app-phone_mockup.svg";
 import googlePlayLogo from "assets/google_play-logo.svg";
 
-function Download() {
+function Download({refDownload}) {
 	return (
 		<Container fluid lassName="my-4">
-			<Row>
+			<Row ref={refDownload}>
 				<Col
 					xs={12}
 					md={5}
 					className="d-flex flex-column align-self-center align-items-center"
 				>
 					<h1>Get it now</h1>
-					<Button>¡Ojalá! for Android</Button>
-
+					<Button href="https://play.google.com/store/apps/details?id=com.actionforeducation.ojala&hl=es" target="_blank">¡Ojalá! for Android</Button>
 					<Image src={googlePlayLogo} className="my-5" fluid></Image>
 				</Col>
 

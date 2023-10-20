@@ -11,12 +11,12 @@ function FeaturesLeft() {
 			<Row>
 				<Col xs={12} md={5} className="align-self-center text-center">
 					<Container fluid>
-                        <h1>¡Ojalá! is </h1>
-                        <h2>IN 4 LANGUAGES</h2>
-                        <h3>IN... LANGUAGES</h3>
-                        <p>Learn Spanish with the app ¡Ojalá!<br></br>
-                        for Android phones using<br></br>
-                        Wolof, الدارجة, Français or English.</p>
+                        <h1>¡Ojalá! is</h1>
+                        <h2>IN 5 LANGUAGES</h2>
+                        <h3>IN....LANGUAGES</h3>
+                        <p>Learn Spanish with ¡Ojalá!<br></br>
+                        the app for Android to learn using<br></br>
+                        Wolof, الدارجة, الفصحى ,Français or English.</p>
                     </Container>
 				</Col>
 				<Col xs={12} md={7}>

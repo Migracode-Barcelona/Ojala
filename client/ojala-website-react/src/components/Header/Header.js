@@ -7,7 +7,36 @@ import Button from "react-bootstrap/Button";
 import ojala_logo from "assets/ojala_logo.png";
 
 function Header() {
-	/* const [button1Clicked, setButton1Clicked] = useState(false);
+	
+	return (
+		
+		<Container fluid className="my-2">
+			<Row>
+				<Col xs={4} md={2}>
+					<Container fluid className="text-center">
+						<Image width={"60%"} src={ojala_logo} fluid />
+					</Container>
+				</Col>
+
+				<Col
+					xs={8}
+					md={10}
+					className="d-flex flex-wrap justify-content-end align-self-center"
+				>
+					<p className="mx-3 my-auto">لغة الصفحة</p>
+					<Button>عربي</Button>
+					<div className="mx-3"></div>
+					<p className="mx-3 my-auto">Idioma</p>
+					<Button className="me-4">Castellano</Button>
+				</Col>
+			</Row>
+		</Container>
+	);
+}
+
+export default Header;
+
+/* const [button1Clicked, setButton1Clicked] = useState(false);
 	const [button2Clicked, setButton2Clicked] = useState(false);
 
 	const handleButton1Click = () => {
@@ -29,31 +58,3 @@ function Header() {
 			margin: "5px",
 		}}
 	></Button>; */
-
-	return (
-		
-		<Container fluid className="my-2">
-			<Row>
-				<Col xs={4} md={2}>
-					<Container fluid className="text-center">
-						<Image width={"60%"} src={ojala_logo} fluid />
-					</Container>
-				</Col>
-
-				<Col
-					xs={8}
-					md={10}
-					className="d-flex flex-wrap justify-content-end align-self-center"
-				>
-					<p className="mx-3 my-auto">لغة الصفحة</p>
-					<Button>عربي</Button>
-					<div className="mx-3"></div>
-					<p className="mx-3 my-auto">Idioma de la página</p>
-					<Button className="me-4">Castellano</Button>
-				</Col>
-			</Row>
-		</Container>
-	);
-}
-
-export default Header;
