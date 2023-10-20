@@ -2,11 +2,7 @@ import "./App.scss";
 import HomeContainer from "./containers/Home/HomeContainer";
 
 function App() {
-  return (
-    <div className="container">
-      <HomeContainer />
-    </div>
-  );
+	return <HomeContainer />;
 }
 
 export default App;
