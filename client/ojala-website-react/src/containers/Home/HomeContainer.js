@@ -4,7 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import Hero from "../../components/Hero/Hero";
 import { Container } from "react-bootstrap";
 import Download from "components/Download/Download";
-import Cards4 from "components/Cards4/Cards4";
+import Cards from "components/Cards/Cards";
 import Header from "components/Header/Header";
 function HomeContainer() {
   return (
@@ -12,7 +12,7 @@ function HomeContainer() {
       <Header />
       <Hero />
       <FeaturesLeft />
-      <Cards4 />
+      <Cards />
       <Download />
       <Footer />
     </Container>
