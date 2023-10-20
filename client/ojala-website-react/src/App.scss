@@ -16,3 +16,40 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+
+.link-underline {
+  text-decoration: none;
+}
+
+.list li {
+  padding-bottom: 5px;
+}
+// .bg-gradiente {
+//   background: rgb(63, 94, 251);
+//   background: linear-gradient(
+//     90deg,
+//     rgba(63, 94, 251, 1) 28%,
+//     rgba(160, 0, 203, 1) 100%
+//   );
+// }
+// .bg-gradiente {
+//   background: rgb(63,94,251);
+//   background: radial-gradient(circle, rgba(63,94,251,1) 28%, rgba(160,0,203,1) 100%);
+// }
+// .bg-gradiente {
+//   background: rgb(21,120,255);
+//   background: linear-gradient(90deg, rgba(21,120,255,1) 0%, rgba(0,0,0,1) 100%);
+// }
+// .bg-gradiente {
+//   background: rgb(43,77,223);
+//   background: radial-gradient(circle, rgba(43,77,223,1) 0%, rgba(41,74,214,1) 0%, rgba(16,28,81,1) 61%, rgba(0,0,0,1) 100%);
+// }
+// .bg-gradiente {
+//   background: rgb(45,123,55);
+//   background: linear-gradient(90deg, rgba(45,123,55,1) 0%, rgba(0,50,86,1) 50%, rgba(1,48,156,1) 100%);
+// }
+
+.copyright {
+  font-size: 14px;
+}

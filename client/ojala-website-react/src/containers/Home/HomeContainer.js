@@ -7,16 +7,16 @@ import Download from "components/Download/Download";
 import Cards4 from "components/Cards4/Cards4";
 import Header from "components/Header/Header";
 function HomeContainer() {
-	return (
-		<Container fluid>
-			<Header/>
-			<Hero />
-			<FeaturesLeft />
-            <Cards4/>
-            <Download/>
-			<Footer />
-		</Container>
-	);
+  return (
+    <Container fluid>
+      <Header />
+      <Hero />
+      <FeaturesLeft />
+      <Cards4 />
+      <Download />
+      <Footer />
+    </Container>
+  );
 }
 
 export default HomeContainer;
