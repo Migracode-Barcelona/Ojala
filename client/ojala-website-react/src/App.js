@@ -1,13 +1,8 @@
 import "./App.scss";
 import HomeContainer from "./containers/Home/HomeContainer";
-import Container from "react-bootstrap/Container";
 
 function App() {
-	return (
-		
-			<HomeContainer />
-	
-	);
+	return <HomeContainer />;
 }
 
 export default App;

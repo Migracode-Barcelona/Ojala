@@ -9,11 +9,11 @@ import Header from "components/Header/Header";
 function HomeContainer() {
 	return (
 		<Container fluid className="px-0">
-			<Header/>
+			<Header />
 			<Hero />
 			<FeaturesLeft />
-            <Cards/>
-            <Download/>
+			<Cards />
+			<Download />
 			<Footer />
 		</Container>
 	);
