@@ -8,7 +8,7 @@ import Cards from "components/Cards/Cards";
 import Header from "components/Header/Header";
 function HomeContainer() {
 	return (
-		<Container fluid>
+		<Container fluid className="px-0">
 			<Header/>
 			<Hero />
 			<FeaturesLeft />

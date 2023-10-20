@@ -1,11 +1,12 @@
 import "./App.scss";
 import HomeContainer from "./containers/Home/HomeContainer";
+import Container from "react-bootstrap/Container";
 
 function App() {
 	return (
-		<div className="container">
+		
 			<HomeContainer />
-		</div>
+	
 	);
 }
 

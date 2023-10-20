@@ -7,20 +7,19 @@ import textBubbles from "assets/example-text_bubbles.png";
 
 function FeaturesLeft() {
 	return (
-		<Container fluid>
-			<hr></hr>
+		<Container fluid className="my-4">
 			<Row>
-				<Col xs={12} md={6}>
+				<Col xs={12} md={5} className="align-self-center text-center">
 					<Container fluid>
                         <h1>¡Ojalá! is </h1>
                         <h2>IN 4 LANGUAGES</h2>
-                        <h3>IN 4 LANGUAGES</h3>
+                        <h3>IN... LANGUAGES</h3>
                         <p>Learn Spanish with the app ¡Ojalá!<br></br>
                         for Android phones using<br></br>
                         Wolof, الدارجة, Français or English.</p>
                     </Container>
 				</Col>
-				<Col xs={12} md={6}>
+				<Col xs={12} md={7}>
 					<Image src={textBubbles} fluid></Image>
 				</Col>
 			</Row>
