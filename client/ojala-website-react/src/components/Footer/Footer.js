@@ -9,7 +9,7 @@ function Footer() {
 			fluid
 			className="bg-primary text-white d-flex align-items-center justify-content-center"
 		>
-			<footer className="w-75 pt-5">
+			<footer className="w-75 pt-4">
 				<Row>
 					<Col>
 						<h4>About us</h4>
@@ -94,9 +94,9 @@ function Footer() {
 					</Col>
 
 					<Row>
-						<Col className="text-center copyright pt-5">
+						<Col className="text-center copyright py-3">
 							<i class="bi bi-c-circle">
-								Copyright 2023 Ojalá Website. Migracode, Barcelona. All rights
+								 Copyright 2023 Ojalá Website. Migracode, Barcelona. All rights
 								reserved.
 							</i>
 						</Col>

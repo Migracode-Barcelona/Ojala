@@ -4,10 +4,11 @@ import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import textBubbles from "assets/example-text_bubbles.png";
+import priceQuestionImage from "assets/text-bubble-cuanto.png";
 
 function FeaturesLeft() {
 	return (
-		<Container fluid className="my-4">
+		<Container fluid className="mb-5">
 			<Row>
 				<Col xs={12} md={5} className="align-self-center text-center">
 					<Container fluid>
@@ -16,11 +17,11 @@ function FeaturesLeft() {
                         <h3>IN....LANGUAGES</h3>
                         <p>Learn Spanish with ¡Ojalá!<br></br>
                         the app for Android to learn using<br></br>
-                        Wolof, الدارجة, الفصحى ,Français or English.</p>
+                        Wolof, الدارجة, الفصحى, Français or English.</p>
                     </Container>
 				</Col>
 				<Col xs={12} md={7}>
-					<Image src={textBubbles} fluid></Image>
+					<Image src={priceQuestionImage} fluid></Image>
 				</Col>
 			</Row>
 		</Container>
