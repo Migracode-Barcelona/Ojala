@@ -7,27 +7,24 @@ import Button from "react-bootstrap/Button";
 import ojala_logo from "assets/ojala_logo.png";
 
 function Header() {
-	
 	return (
-		
-		<Container fluid className="my-2">
+		<Container fluid className="my-1">
 			<Row>
-				<Col xs={4} md={2}>
+				<Col xs={4} md={2} xl={1}>
 					<Container fluid className="text-center">
-						<Image width={"60%"} src={ojala_logo} fluid />
+						<Image width={"60%"} height={"60%"} src={ojala_logo} fluid />
 					</Container>
 				</Col>
 
 				<Col
 					xs={8}
 					md={10}
+					xl={11}
 					className="d-flex flex-wrap justify-content-end align-self-center"
 				>
-					<p className="mx-3 my-auto">لغة الصفحة</p>
+					<i className="bi bi-translate icon-lg"></i>
 					<Button>عربي</Button>
-					<div className="mx-3"></div>
-					<p className="mx-3 my-auto">Idioma</p>
-					<Button className="me-4">Castellano</Button>
+					<Button className="me-1">Castellano</Button>
 				</Col>
 			</Row>
 		</Container>

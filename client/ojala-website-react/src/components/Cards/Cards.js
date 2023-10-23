@@ -12,7 +12,7 @@ import user6 from "assets/Wolof-Card.png";
 
 function Cards() {
 	return (
-		<Container fluid className="my-5 w-75">
+		<Container fluid className="my-3 w-75">
 			<Row xs={1} md={2} className="g-4">
 
 				<Col xs={12} md={4}>

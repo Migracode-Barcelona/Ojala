@@ -15,11 +15,11 @@ h3 {
 $h1-font-size: $font-size-base * 2.3;
 $h2-font-size: $font-size-base * 1.5;
 $h3-font-size: $font-size-base * 1.5;
-$h4-font-size: $font-size-base * 1.2;
+$h4-font-size: $font-size-base * 0.8;
 
 $display-font-family: $quicksand;
 $display-font-sizes: (
-	1: 5.4rem,
+	1: 5rem,
 );
 
 //colors
@@ -33,6 +33,49 @@ $theme-colors: (
 	"warning": #ebd000,
 	"danger": #ff0004,
 );
+
+// introduction
+.full-height {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.full-height > :first-child {
+	margin-top: auto;
+}
+.full-height > :nth-child(2) {
+	align-self: center;
+	margin: auto; /* Center horizontally within the container */
+}
+
+// icons
+.icon-lg {
+	font-size: 2rem;
+	padding-right: 0.7rem;
+}
+
+// Buttons
+.btn {
+	font-size: 20px !important;
+	padding: 5px 14px !important;
+	margin: 5px !important;
+	border-radius: 5rem !important;
+
+	&:hover {
+		box-shadow: 0 0 40px rgba(255, 114, 27, 0.576);
+	}
+
+	// Customize the primary button
+	&-primary {
+		background-color: #11c26d !important;
+		border-color: #11c26d !important;
+		&:hover {
+			background-color: #dd752e !important;
+			border-color: #dd752e !important;
+		}
+	}
+}
 
 // Cards
 .gray-transparent-background {
@@ -54,6 +97,7 @@ $theme-colors: (
 
 .list li {
 	padding-bottom: 5px;
+	font-size: 1.2rem !important;
 }
 
 .copyright {
