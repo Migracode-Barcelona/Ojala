@@ -1,46 +1,108 @@
-
 // typography
 $font-family-base: $quicksand;
-$font-size-base: 1.8rem;
-$body-color: #007BB6;
+$font-size-base: 1.7rem;
+$body-color: #007bb6;
 
 $headings-font-family: $opensans;
-h1{
-    font-family: $quicksand !important;
+h1 {
+	font-family: $quicksand !important;
 }
-h3{
-    font-family: $redacted_script !important;
-    color: #dd732c !important;
-    margin-top: -1.4rem !important;
+h3 {
+	font-family: $redacted_script !important;
+	color: #dd732c !important;
+	margin-top: -1.4rem !important;
 }
-$h1-font-size: 4.1rem;
-$h2-font-size: 3rem;
-$h3-font-size: 3rem;
-$h4-font-size: 2.2rem;
+$h1-font-size: $font-size-base * 2.3;
+$h2-font-size: $font-size-base * 1.5;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 0.8;
 
 $display-font-family: $quicksand;
 $display-font-sizes: (
-  1: 5.4rem
+	1: 5rem,
 );
 
 //colors
 $theme-colors: (
-    "light":      #ffffff,
-    "dark":       #16122c,
-    "primary":    #007BB6,
-    "secondary":  #dd752e,
-    "info":       #11C26D,
-    "success":    #00b965,
-    "warning":    #ebd000,
-    "danger":     #ff0004,
+	"light": #ffffff,
+	"dark": #16122c,
+	"primary": #007bb6,
+	"secondary": #dd752e,
+	"info": #11c26d,
+	"success": #00b965,
+	"warning": #ebd000,
+	"danger": #ff0004,
 );
-.btn-primary {
-    color: #fff !important;
-    background-color: #11C26D !important;
-    font-size: 1.8rem !important;    
-}   
 
+// introduction
+.full-height {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.full-height > :first-child {
+	margin-top: auto;
+}
+.full-height > :nth-child(2) {
+	align-self: center;
+	margin: auto; /* Center horizontally within the container */
+}
 
+// icons
+.icon-lg {
+	font-size: 2rem;
+	padding-right: 0.7rem;
+}
+
+// Buttons
+.btn {
+	font-size: 20px !important;
+	padding: 5px 14px !important;
+	margin: 5px !important;
+	border-radius: 5rem !important;
+
+	&:hover {
+		box-shadow: 0 0 40px rgba(255, 114, 27, 0.576);
+	}
+
+	// Customize the primary button
+	&-primary {
+		background-color: #11c26d !important;
+		border-color: #11c26d !important;
+		&:hover {
+			background-color: #dd752e !important;
+			border-color: #dd752e !important;
+		}
+	}
+}
+
+// Cards
+.gray-transparent-background {
+	background-color: rgba(255, 255, 255, 0.876);
+}
+.cards-text {
+	font-size: 1.3rem;
+}
+
+// Hero
+.orange-color {
+	color: #dd752e;
+}
+
+//Footer
+.link-underline {
+	text-decoration: none;
+}
+
+.list li {
+	padding-bottom: 5px;
+	font-size: 1.2rem !important;
+}
+
+.copyright {
+	font-size: 14px;
+}
 
 /* import bootstrap to set changes */
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
