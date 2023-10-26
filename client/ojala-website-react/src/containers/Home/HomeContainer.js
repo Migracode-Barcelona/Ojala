@@ -4,7 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import Hero from "../../components/Hero/Hero";
 import { Container } from "react-bootstrap";
 import Download from "components/Download/Download";
-import Cards from "components/Cards/Cards";
+import Carousel from "components/Carousel/Carousel";
 import Header from "components/Header/Header";
 function HomeContainer() {
 	const refDownload = useRef(null);
@@ -20,7 +20,7 @@ function HomeContainer() {
 				<Hero handleClickHeader={handleClickHeaderScrollToDownload}  />
 			</Container>
 			<FeaturesLeft />
-			<Cards />
+			<Carousel />
 			<Download refDownload={refDownload} />
 			<Footer />
 		</Container>
