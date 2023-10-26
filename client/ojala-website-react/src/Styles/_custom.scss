@@ -81,8 +81,10 @@ $theme-colors: (
 .gray-transparent-background {
 	background-color: rgba(255, 255, 255, 0.876);
 }
+
 .cards-text {
-	font-size: 1.3rem;
+	font-size: 1rem;
+	min-height: 180px;
 }
 
 // Hero
