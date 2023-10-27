@@ -68,8 +68,8 @@ $theme-colors: (
 
 	// Customize the primary button
 	&-primary {
-		background-color: #11c26d !important;
-		border-color: #11c26d !important;
+		background-color: #007bb6,!important;
+		border-color: #007bb6,!important;
 		&:hover {
 			background-color: #dd752e !important;
 			border-color: #dd752e !important;
@@ -77,6 +77,15 @@ $theme-colors: (
 	}
 }
 
+// Dropdown Menu
+
+.dropdown-toggle {
+	color: rgb(255, 255, 255) !important;
+}
+
+.dropdown-menu {
+	background-color: #007bb6;
+}
 // Cards
 .gray-transparent-background {
 	background-color: rgba(255, 255, 255, 0.876);
