@@ -8,7 +8,7 @@ import ojala_logo from "assets/ojala_logo.png";
 
 function Header() {
 	return (
-		<Container fluid className="my-1">
+		<Container fluid className="my-1 px-0">
 			<Row>
 				<Col xs={4} md={2} xl={1}>
 					<Container fluid className="text-center">
