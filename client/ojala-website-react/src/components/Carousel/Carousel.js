@@ -7,14 +7,14 @@ import EnglishCard from "./Cards/EnglishCard";
 import FrenchCard from "./Cards/FrenchCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import responsive from "./Responsiveness/Responsive";
+import responsive from "../../utils/Responsiveness/Responsive";
 
 function TheCarousel() {
 	return (
 		<Container fluid className="my-3 w-75">
 			<Carousel 
 				responsive={responsive} 
-				removeArrowOnDeviceType={["tablet", "mobile"]}
+				removeArrowOnDeviceType={["tablet", "mobile",]}
 				>
 					<ArabicCard />
 					<DarijaCard />

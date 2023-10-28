@@ -87,6 +87,26 @@ $theme-colors: (
 	min-height: 180px;
 }
 
+//Carousel
+
+button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
+    background-color: #007bb6;
+	box-shadow: 0 0 10px white;
+
+	&:hover {
+		background-color: #dd752e;
+	}
+}
+
+button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
+	background-color: #007bb6;
+	box-shadow: 0 0 10px white;
+
+	&:hover {
+		background-color: #dd752e;
+	}
+}
+
 // Hero
 .orange-color {
 	color: #dd752e;
