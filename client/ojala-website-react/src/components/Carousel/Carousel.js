@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Container from "react-bootstrap/Container";
-import ArabicCard from "./Cards/ArabicCard";
-import DarijaCard from "./Cards/DarijaCard";
-import WolofCard from "./Cards/WolofCard";
-import EnglishCard from "./Cards/EnglishCard";
-import FrenchCard from "./Cards/FrenchCard";
+import LanguageCard from "./Cards/LanguageCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import responsive from "../../utils/Responsiveness/Responsive";
+import cardData from "./Cards/CardsData";
+
 
 function TheCarousel() {
 	return (
@@ -16,11 +14,13 @@ function TheCarousel() {
 				responsive={responsive} 
 				removeArrowOnDeviceType={["tablet", "mobile",]}
 				>
-					<ArabicCard />
-					<DarijaCard />
-					<WolofCard />
-					<EnglishCard />
-					<FrenchCard />	
+					{cardData.map( card => 
+						<LanguageCard 
+							image={card.image} 
+							title={card.title} 
+							text={card.text}
+							/>
+					)}
 			</Carousel>
 		</Container>
 	);
