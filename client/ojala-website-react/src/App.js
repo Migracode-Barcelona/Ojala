@@ -1,3 +1,4 @@
+import ContactInfo from "pages/ContactInfo/ContactInfo";
 import "./App.scss";
 import HomeContainer from "./containers/Home/HomeContainer";
 

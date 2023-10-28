@@ -9,11 +9,21 @@ import ojala_logo from "assets/ojala_logo.png";
 
 function Header() {
 	return (
+<<<<<<< HEAD
+		<Container fluid className="my-1 px-0">
+			<Row>
+				<Col xs={4} md={2} xl={1}>
+					<Container fluid className="text-center">
+						<Image width={"60%"} height={"60%"} src={ojala_logo} fluid />
+					</Container>
+				</Col>
+=======
 		<Container fluid className="my-1">
       <Row>
         <Col xs={4} 
 		     md={2}
 			 xl={1}>
+>>>>>>> dev
 
           <Container fluid className="text-center">
           <Image width={"60%"} height={"60%"} src={ojala_logo} fluid />
