@@ -6,7 +6,6 @@ import "react-multi-carousel/lib/styles.css";
 import responsive from "../../utils/Responsiveness/Responsive";
 import cardData from "./Cards/CardsData";
 
-
 function TheCarousel() {
 	return (
 		<Container fluid className="my-3 w-75">

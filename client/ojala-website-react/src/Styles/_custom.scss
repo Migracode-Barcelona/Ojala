@@ -92,6 +92,7 @@ $theme-colors: (
 button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
     background-color: #007bb6;
 	box-shadow: 0 0 10px white;
+	left: 0;
 
 	&:hover {
 		background-color: #dd752e;
@@ -101,10 +102,15 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
 button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
 	background-color: #007bb6;
 	box-shadow: 0 0 10px white;
+	right: 0.5%;
 
 	&:hover {
 		background-color: #dd752e;
 	}
+}
+
+.react-multi-carousel-item {
+    padding-left: 2.5%;
 }
 
 // Hero
