@@ -112,7 +112,7 @@ function ContactInfo() {
 								</Form.Group>
 							</Row>
 
-							<Container fluid className="w-75 my-3 text-center">
+							<Container fluid className="w-75 my-5 text-center">
 								<Button onClick={() => wasSubmitBtnClicked=true} type="submit">
 									Submit form
 								</Button>

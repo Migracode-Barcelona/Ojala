@@ -9,7 +9,7 @@ import googlePlayLogo from "assets/google_play-logo.svg";
 
 function Download({refDownload}) {
 	return (
-		<Container fluid lassName="my-1">
+		<Container fluid className="my-1">
 			<Row ref={refDownload}>
 				<Col
 					xs={12}
