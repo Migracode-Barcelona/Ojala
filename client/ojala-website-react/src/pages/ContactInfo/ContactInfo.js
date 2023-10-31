@@ -14,7 +14,7 @@ function ContactInfo() {
 	let wasSubmitBtnClicked = false;
 
 	return (
-		<Container fluid>
+		<Container fluid className="px-0">
 			<Header />
 
 			<Container fluid className="my-4 w-75 text-center">
