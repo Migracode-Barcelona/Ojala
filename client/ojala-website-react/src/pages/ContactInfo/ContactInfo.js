@@ -17,7 +17,7 @@ function ContactInfo() {
 		<Container fluid className="px-0">
 			<Header />
 
-			<Container fluid className="my-4 w-75 text-center">
+			<Container fluid className="my-2 w-50 text-center">
 				<Image src={heroImage} alt="Image" width={"75%"} fluid></Image>
 			</Container>
 
@@ -112,7 +112,7 @@ function ContactInfo() {
 								</Form.Group>
 							</Row>
 
-							<Container fluid className="w-75 my-5 text-center">
+							<Container fluid className="w-75 my-4 text-center">
 								<Button onClick={() => wasSubmitBtnClicked=true} type="submit">
 									Submit form
 								</Button>
