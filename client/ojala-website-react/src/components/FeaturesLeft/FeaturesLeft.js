@@ -3,7 +3,8 @@ import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import priceQuestionImage from "assets/text-bubble-cuanto-rtl.png";
+import textBubbles from "assets/example-text_bubbles.png";
+import priceQuestionImage from "assets/text-bubble-cuanto.png";
 
 function FeaturesLeft() {
 	return (

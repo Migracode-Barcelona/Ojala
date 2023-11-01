@@ -3,11 +3,9 @@ import FeaturesLeft from "../../components/FeaturesLeft/FeaturesLeft";
 import Footer from "../../components/Footer/Footer";
 import Hero from "../../components/Hero/Hero";
 import { Container } from "react-bootstrap";
-import Description from "components/Description/Description";
 import Download from "components/Download/Download";
-import Carousel from "components/Carousel/Carousel";
+import Cards from "components/Cards/Cards";
 import Header from "components/Header/Header";
-
 function HomeContainer() {
 	const refDownload = useRef(null);
 
@@ -20,11 +18,10 @@ function HomeContainer() {
 			<Container fluid className="full-height px-0">
 				<Header/>
 				<Hero handleClickHeader={handleClickHeaderScrollToDownload}  />
-				<Description />
 			</Container>
 			<FeaturesLeft />
-			<Carousel />
-			<Download refDownload={refDownload} />	
+			<Cards />
+			<Download refDownload={refDownload} />
 			<Footer />
 		</Container>
 	);
