@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Dropdown from 'react-bootstrap/Dropdown';
 import ojala_logo from "assets/ojala_logo.png";
+import { Link } from 'react-router-dom';
 
 function Header() {
 	return (
@@ -13,18 +14,19 @@ function Header() {
       <Row>
         <Col xs={4} 
 		     md={2}
-			 xl={1}>
+			 xl={1}
+			 className="text-center d-flex align-self-center">
 
-          <Container fluid className="text-center">
-          <Image width={"60%"} height={"60%"} src={ojala_logo} fluid />
-          </Container>
+          
+          <Image className="w-50" src={ojala_logo} fluid />
+          
         </Col>
 
         <Col xs={8}
 		     md={10}
 		     xl={11}
 		  className="d-flex flex-wrap justify-content-end align-self-center">
-          <Button className="me-1">Contacto</Button>
+          <Button className="me-1"><Link to={"/contact"} className="link-light link-underline-opacity-0">Contact</Link></Button>
 		  <Dropdown>
       <Dropdown.Toggle id="dropdown-basic">
 	  <i className="bi bi-translate icon-lg"></i>

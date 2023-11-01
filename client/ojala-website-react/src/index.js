@@ -4,12 +4,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 import HomeContainer from "containers/Home/HomeContainer";
-import ContactInfo from "pages/ContactInfo/ContactInfo";
+import ContactInfoContainer from "pages/ContactInfo/ContactInfoContainer";
 import ErrorPage from "utils/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
 	{ path: "/", element: <HomeContainer />, errorElement: <ErrorPage /> },
-	{ path: "contact", element: <ContactInfo /> },
+	{ path: "contact", element: <ContactInfoContainer /> },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

@@ -18,7 +18,7 @@ function Download({refDownload}) {
 				>
 					<h1>Get it now</h1>
 					<Button href="https://play.google.com/store/apps/details?id=com.actionforeducation.ojala&hl=es" target="_blank">¡Ojalá! for Android</Button>
-					<Image src={googlePlayLogo} className="my-3 w-75" fluid></Image>
+					<Image src={googlePlayLogo} className="my-3 w-50" fluid></Image>
 				</Col>
 
 				<Col xs={12} md={7}>
