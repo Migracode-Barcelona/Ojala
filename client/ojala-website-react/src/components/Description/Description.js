@@ -9,15 +9,15 @@ import freeImage from "assets/free.jpg";
 
 function Description() {
   const imageStyle = {
-    width: '40%',
-    height: '100px',
+    width: '3em',
+    height: '3em',
     display: 'block',
     margin: '0 auto',
   };
 
   return (
-    <Container fluid className="w-75">
-      <h1 className="mt-4">¡Ojalá! is...</h1>
+    <Container fluid className="w-75 description-height">
+      <h1 className="my-5">¡Ojalá! is...</h1>
       <Row>
         <Col xs={12} md={3} className="mb-3 text-center">
           <img src={neededImage} alt="Needed" style={imageStyle} />

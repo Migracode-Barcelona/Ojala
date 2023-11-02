@@ -13,10 +13,9 @@ h3 {
 	margin-top: -1.4rem !important;
 }
 $h1-font-size: $font-size-base * 2.3;
-$h2-font-size: $font-size-base * 1.5;
+$h2-font-size: $font-size-base * 1.1;
 $h3-font-size: $font-size-base * 1.5;
 $h4-font-size: $font-size-base * 0.8;
-
 
 $display-font-family: $quicksand;
 $display-font-sizes: (
@@ -48,6 +47,14 @@ $theme-colors: (
 .full-height > :nth-child(2) {
 	align-self: center;
 	margin: auto; /* Center horizontally within the container */
+}
+
+.description-height {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 // icons
