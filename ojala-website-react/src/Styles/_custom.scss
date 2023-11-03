@@ -1,0 +1,156 @@
+// typography
+$font-family-base: $quicksand;
+$font-size-base: 1.2rem;
+$body-color: #007bb6;
+
+$headings-font-family: $opensans;
+h1 {
+	font-family: $quicksand !important;
+}
+h3 {
+	font-family: $redacted_script !important;
+	color: #dd732c !important;
+	margin-top: -0.8rem !important;
+}
+$h1-font-size: $font-size-base * 2.3;
+$h2-font-size: $font-size-base * 1.1;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 0.8;
+
+$display-font-family: $quicksand;
+$display-font-sizes: (
+	1: 5rem,
+);
+
+//colors
+$theme-colors: (
+	"light": #ffffff,
+	"dark": #16122c,
+	"primary": #007bb6,
+	"secondary": #dd752e,
+	"info": #11c26d,
+	"success": #00b965,
+	"warning": #ebd000,
+	"danger": #ff0004,
+);
+
+// header image
+.header-logo{
+	width: 3.2em;
+}
+
+// introduction
+.full-height {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.full-height > :first-child {
+	margin-top: auto;
+}
+.full-height > :nth-child(2) {
+	align-self: center;
+	margin: auto; /* Center horizontally within the container */
+}
+
+.description-full-height {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+// icons
+.icon-lg {
+	font-size: 1.2rem;
+	padding-right: 0.7rem;
+}
+
+.icon-description {
+	font-size: 2.8rem;
+	color: #dd732c;
+	margin-bottom: 0.5em;
+}
+
+// links
+
+
+// Buttons
+.btn {
+	font-size: 20px !important;
+	padding: 5px 14px !important;
+	margin: 5px !important;
+	border-radius: 5rem !important;
+
+	&:hover {
+		box-shadow: 0 0 40px rgba(255, 114, 27, 0.576);
+	}
+
+	// Customize the primary button
+	&-primary {
+		background-color: #007bb6,!important;
+		border-color: #007bb6,!important;
+		&:hover {
+			background-color: #dd752e !important;
+			border-color: #dd752e !important;
+		}
+	}
+}
+
+// Cards
+.gray-transparent-background {
+	background-color: rgba(255, 255, 255, 0.876);
+}
+
+.cards-text {
+	font-size: 0.6em;
+}
+
+//Carousel
+button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
+    background-color: #007bb6;
+	box-shadow: 0 0 10px white;
+	left: 0;
+
+	&:hover {
+		background-color: #dd752e;
+	}
+}
+
+button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
+	background-color: #007bb6;
+	box-shadow: 0 0 10px white;
+	right: 0.5%;
+
+	&:hover {
+		background-color: #dd752e;
+	}
+}
+
+.react-multi-carousel-item {
+    padding-left: 2.5%;
+}
+
+// Hero
+.orange-color {
+	color: #dd752e;
+}
+
+//Footer
+.link-underline {
+	text-decoration: none;
+}
+
+.list li {
+	padding-bottom: 5px;
+	font-size: 1.2rem !important;
+}
+
+.copyright {
+	font-size: 14px;
+}
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
