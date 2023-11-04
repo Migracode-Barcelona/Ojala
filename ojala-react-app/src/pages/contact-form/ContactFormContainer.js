@@ -45,6 +45,7 @@ function ContactFormContainer() {
 
 								{inputFieldData.map((input) => (
 									<ContactFormInput
+										key={input.id}
 										md={input.md}
 										label={input.label}
 										type={input.type}

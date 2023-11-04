@@ -110,7 +110,7 @@ function Footer() {
 
 					<Row>
 						<Col className="text-center copyright py-3">
-							<i onClick={start} class="fa-solid fa-copyright" />
+							<i onClick={start} className="fa-solid fa-copyright" />
 							<span>
 								{" "}
 								Copyright 2023 Ojalá Website. Migracode, Barcelona. All rights

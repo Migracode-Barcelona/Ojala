@@ -15,6 +15,8 @@ function TheCarousel() {
 				>
 					{cardData.map( card => 
 						<LanguageCard 
+							key={card.id}
+							id={card.id}
 							image={card.image} 
 							title={card.title} 
 							text={card.text}
