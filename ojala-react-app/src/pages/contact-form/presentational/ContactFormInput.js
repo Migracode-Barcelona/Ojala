@@ -1,8 +1,16 @@
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 
-function ContactInfoInputField({md, label, type, name, values, handleChange, touched, errors}) {
-
+function ContactFormInput({
+	md,
+	label,
+	type,
+	name,
+	values,
+	handleChange,
+	touched,
+	errors,
+}) {
 	return (
 		<Form.Group as={Col} md={md}>
 			<Form.Label>{label}</Form.Label>
@@ -20,4 +28,4 @@ function ContactInfoInputField({md, label, type, name, values, handleChange, tou
 	);
 }
 
-export default ContactInfoInputField;
+export default ContactFormInput;

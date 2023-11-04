@@ -8,6 +8,7 @@ function FeaturesLeft() {
 	return (
 		<Container fluid className="mb-5">
 			<Row>
+
 				<Col xs={12} md={6} className="align-self-center text-center">
 					<Container fluid className="ms-3">
                         <h1>¡Ojalá! is</h1>
@@ -18,9 +19,11 @@ function FeaturesLeft() {
                         Wolof, الدارجة, الفصحى, Français or English.</p>
                     </Container>
 				</Col>
+				
 				<Col xs={12} md={6}>
 					<Image src={priceQuestionImage} fluid></Image>
 				</Col>
+
 			</Row>
 		</Container>
 	);

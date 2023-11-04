@@ -10,6 +10,7 @@ function Download({refDownload}) {
 	return (
 		<Container fluid className="my-5">
 			<Row ref={refDownload}>
+
 				<Col
 					xs={12}
 					md={5}
@@ -23,6 +24,7 @@ function Download({refDownload}) {
 				<Col xs={12} md={7}>
 					<Image src={appPhoneMockup} fluid></Image>
 				</Col>
+				
 			</Row>
 		</Container>
 	);

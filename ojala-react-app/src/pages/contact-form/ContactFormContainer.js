@@ -9,10 +9,10 @@ import Header from "components/header/Header";
 import Image from "react-bootstrap/Image";
 import formCover from "assets/form-cover.png";
 import inputFieldData from "data/input-field-data";
-import ContactInfoInputField from "./presentational/ContactInfoInputField";
+import ContactFormInput from "./presentational/ContactFormInput";
 import postContactForm from "services/contact-form-service";
 
-function ContactInfoContainer() {
+function ContactFormContainer() {
 	const { Formik } = formik;
 
 	const handleSubmit = (values) => {
@@ -21,6 +21,7 @@ function ContactInfoContainer() {
 
 	return (
 		<Container fluid className="px-0">
+
 			<Header />
 
 			<Container fluid className="my-4 w-75 text-center">
@@ -41,8 +42,9 @@ function ContactInfoContainer() {
 					{({ handleSubmit, handleChange, values, touched, errors }) => (
 						<Form noValidate onSubmit={handleSubmit}>
 							<Row className="mb-3 gy-2">
+
 								{inputFieldData.map((input) => (
-									<ContactInfoInputField
+									<ContactFormInput
 										md={input.md}
 										label={input.label}
 										type={input.type}
@@ -72,17 +74,20 @@ function ContactInfoContainer() {
 										{errors.select}
 									</Form.Control.Feedback>
 								</Form.Group>
+
 							</Row>
 
 							<Container fluid className="w-75 my-4 mb-5 text-center">
 								<Button type="submit">Submit form</Button>
 							</Container>
+
 						</Form>
 					)}
 				</Formik>
 			</Container>
+			
 		</Container>
 	);
 }
 
-export default ContactInfoContainer;
+export default ContactFormContainer;

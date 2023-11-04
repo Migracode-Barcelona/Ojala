@@ -2,12 +2,18 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import sound from "assets/yery-sorry-baby.m4a"
 
 function Footer() {
-
-	const classesLinkFooter = "link-light link-underline-opacity-0 link-underline-opacity-75-hover link-offset-3-hover";
+	const classesLinkFooter =
+		"link-light link-underline-opacity-0 link-underline-opacity-75-hover link-offset-3-hover";
 	const classesUlFooter = "list-unstyled py-2 list";
+
+	let audio = new Audio(sound)
+	const start = () => {
+	  audio.play()
+	}
 
 	return (
 		<Container
@@ -22,7 +28,11 @@ function Footer() {
 							<li>Courses</li>
 							<li>Mission</li>
 							<li>Approach</li>
-							<li><Link to={"/contact"} className={classesLinkFooter}>Contact Us</Link></li>
+							<li>
+								<Link to={"/contact"} className={classesLinkFooter}>
+									Contact Us
+								</Link>
+							</li>
 						</ul>
 					</Col>
 
@@ -100,13 +110,14 @@ function Footer() {
 
 					<Row>
 						<Col className="text-center copyright py-3">
-						<i class="fa-solid fa-copyright" /><span> Copyright 2023 Ojalá Website. Migracode, Barcelona. All rights
-								reserved.</span>
-								 
-						
+							<i onClick={start} class="fa-solid fa-copyright" />
+							<span>
+								{" "}
+								Copyright 2023 Ojalá Website. Migracode, Barcelona. All rights
+								reserved.
+							</span>
 						</Col>
 					</Row>
-					
 				</Row>
 			</footer>
 		</Container>
