@@ -4,17 +4,17 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Ratio from "react-bootstrap/Ratio";
 
-function LanguageCard(props) {
+function LanguageCard({ image, title, text, direction }) {
     return (
         <Col xs={12} md={10}>
             <Card className="overflow-auto">
                 <Ratio aspectRatio={150}>
-                    <Card.Img src={props.image} className="object-fit-cover" />
+                    <Card.Img src={image} className="object-fit-cover" />
                 </Ratio>
                 <Card.ImgOverlay className="d-flex align-items-end">
                     <Container className="gray-transparent-background">
-                        <Card.Title className="text-end">{props.title}</Card.Title>
-                        <Card.Text className="cards-text text-end">{props.text}</Card.Text>
+                        <Card.Title className={`${direction}`}>{title}</Card.Title>
+                        <Card.Text className={`cards-text ${direction}`}>{text}</Card.Text>
                     </Container>
                 </Card.ImgOverlay>
             </Card>
