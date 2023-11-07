@@ -11,7 +11,7 @@ function TheCarousel() {
 		<Container fluid className="my-3 w-75">
 			<Carousel 
 				responsive={responsive} 
-				// removeArrowOnDeviceType={["tablet", "mobile",]}
+				removeArrowOnDeviceType={["tablet", "mobile",]}
 				>
 					{cardData.map( card => 
 						<LanguageCard 
