@@ -13,8 +13,9 @@ function ContactFormInput({
 }) {
 	return (
 		<Form.Group as={Col} md={md}>
-			<Form.Label>{label}</Form.Label>
+			<Form.Label for={name}>{label}</Form.Label>
 			<Form.Control
+				id={name}
 				type={type}
 				name={name}
 				value={values[name]}

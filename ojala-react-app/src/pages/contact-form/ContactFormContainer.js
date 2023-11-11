@@ -21,8 +21,7 @@ function ContactFormContainer() {
 
 	return (
 		<Container fluid className="px-0">
-
-			<Header />
+			{/* <Header /> */}
 
 			<Container fluid className="my-4 w-75 text-center">
 				<Image src={formCover} alt="Image" fluid></Image>
@@ -42,7 +41,6 @@ function ContactFormContainer() {
 					{({ handleSubmit, handleChange, values, touched, errors }) => (
 						<Form noValidate onSubmit={handleSubmit}>
 							<Row className="mb-3 gy-2">
-
 								{inputFieldData.map((input) => (
 									<ContactFormInput
 										key={input.id}
@@ -58,7 +56,9 @@ function ContactFormContainer() {
 								))}
 
 								<Form.Group as={Col} md="12" className="gy-4">
+									<Form.Label for="issue">"Issue"</Form.Label>
 									<Form.Select
+										id="issue"
 										name="issue"
 										value={values.issue}
 										onChange={handleChange}
@@ -75,18 +75,15 @@ function ContactFormContainer() {
 										{errors.select}
 									</Form.Control.Feedback>
 								</Form.Group>
-
 							</Row>
 
 							<Container fluid className="w-75 my-4 mb-5 text-center">
-								<Button type="submit">Submit form</Button>
+								<Button id="submit" type="submit">Submit form</Button>
 							</Container>
-
 						</Form>
 					)}
 				</Formik>
 			</Container>
-			
 		</Container>
 	);
 }
