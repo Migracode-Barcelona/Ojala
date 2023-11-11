@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "first_name": "Işıl",
+        "last_name": "Cano",
+        "email": "letsrockthis@gmail.com",
+        "issue": "app-install",
+        "submit_date": "2023-11-04T23:00:00.000Z"
+    },
+    {
+        "id": 1,
+        "first_name": "Işıl",
+        "last_name": "Cano",
+        "email": "letsrockthis@gmail.com",
+        "issue": "other",
+        "submit_date": "2023-11-04T23:00:00.000Z"
+    },
+    {
+        "id": 2,
+        "first_name": "Barış",
+        "last_name": "Rodríguez",
+        "email": "livinginbarcelona@gmail.com",
+        "issue": "app-mistake",
+        "submit_date": "2023-11-04T23:00:00.000Z"
+    }
+]
