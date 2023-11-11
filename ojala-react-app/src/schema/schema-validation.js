@@ -12,8 +12,16 @@ yup.addMethod(yup.string, 'email', function validateEmail(message) {
 
 const schema = yup
 	.object({
-		firstName: yup.string().required("First name is required.").min(2, (min) => `Write at least ${min.min} characters.`).trim(),
-		lastName: yup.string().required("Last name is required.").min(2, (min) => `Write at least ${min.min} characters.`).trim(),
+		firstName: yup
+			.string()
+			.required(("First name is required."))
+			.min(2, (min) => `Write at least ${min.min} characters.`)
+			.trim(),
+		lastName: yup
+			.string()
+			.required("Last name is required.")
+			.min(2, (min) => `Write at least ${min.min} characters.`)
+			.trim(),
 		age: yup
 			.number()
 			.typeError("Age must be a number")
@@ -24,7 +32,11 @@ const schema = yup
 			.string()
 			.email("The email must be valid.")
 			.required("An email is required."),
-		issue: yup.string().matches(/app-install|app-mistake|other/, {message:"Select an issue"}).required("Select an issue"),
+		issue: yup
+			.string()
+			.matches(/app-install|app-mistake|other/, 
+				{message:"Select an issue"})
+			.required("Select an issue"),
 	})
 	.required();
 
