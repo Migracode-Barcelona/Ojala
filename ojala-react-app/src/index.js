@@ -6,9 +6,6 @@ import reportWebVitals from "./reportWebVitals";
 import HomeContainer from "containers/home/HomeContainer";
 import ContactInfoContainer from "pages/contact-form/ContactFormContainer";
 import ErrorPage from "pages/error-page/ErrorPage";
-<<<<<<< HEAD
-// import AdminDashboardContainer from "pages/admin-dashboard/AdminDashboardContainer";
-=======
 import i18next from 'i18next';
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -30,7 +27,6 @@ i18next
 	},
 	react: { useSuspense: false }
 });
->>>>>>> dev
 
 const router = createBrowserRouter([
 	{ path: "/", element: <HomeContainer />, errorElement: <ErrorPage /> },
