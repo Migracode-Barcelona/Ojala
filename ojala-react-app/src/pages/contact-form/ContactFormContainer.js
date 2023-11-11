@@ -56,7 +56,7 @@ function ContactFormContainer() {
 								))}
 
 								<Form.Group as={Col} md="12" className="gy-4">
-									<Form.Label for="issue">"Issue"</Form.Label>
+									<Form.Label htmlFor="issue">"Issue"</Form.Label>
 									<Form.Select
 										id="issue"
 										name="issue"
@@ -78,7 +78,7 @@ function ContactFormContainer() {
 							</Row>
 
 							<Container fluid className="w-75 my-4 mb-5 text-center">
-								<Button id="submit" type="submit">Submit form</Button>
+								<Button name="submit" type="submit">Submit form</Button>
 							</Container>
 						</Form>
 					)}
