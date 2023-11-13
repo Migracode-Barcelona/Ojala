@@ -38,6 +38,10 @@ function Header() {
 	let location = useLocation();
 	const { t } = useTranslation();
 
+	const refreshPage = () => {
+		window.location.reload(false);
+	}
+
 	useEffect(() => {
 		document.body.dir = currentLanguage.dir || "ltr"
 	}, [currentLanguage])
@@ -85,7 +89,10 @@ function Header() {
 							{languages.map(({ code, name, country_code }) => (
 								<Dropdown.Item
 									key={country_code}
-									onClick={() => i18next.changeLanguage(code)}
+									onClick={() => {
+										i18next.changeLanguage(code);
+										refreshPage()
+									}}
 									disabled={code === currentLanguageCode}
 								>
 									{name}

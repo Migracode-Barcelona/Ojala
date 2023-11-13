@@ -32,7 +32,7 @@ function ContactFormContainer() {
 
 			<Container fluid className="w-75">
 				<Formik
-					validationSchema={schema}
+					validationSchema={schema(t)}
 					onSubmit={handleSubmit}
 					initialValues={{
 						firstName: "",
