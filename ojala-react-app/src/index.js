@@ -9,7 +9,7 @@ import ErrorPage from "pages/error-page/ErrorPage";
 import AdminLogin from "pages/admin-login/login";
 
 const router = createBrowserRouter([
-	{ path: "/", element: <AdminLogin />, errorElement: <ErrorPage /> },
+	{ path: "/", element: <HomeContainer />, errorElement: <ErrorPage /> },
 	{ path: "contact", element: <ContactInfoContainer /> },
 ]);
 

@@ -5,9 +5,10 @@ import { Container, Form, Row, Col, Button, Image } from "react-bootstrap";
 import formCover from "assets/form-cover.png";
 import ojala_logo from "assets/ojala_logo.png";
 
-const schema = yup.object({
+
+const formValidation = yup.object({
   username: yup.string().required("Username is required"),
-  password: yup.string().required("Password is required"),
+  password: yup.string().min(8, 'Password must be at least 8 characters').required('Password is required'),
 });
 
 function AdminLogin() {
@@ -17,7 +18,7 @@ function AdminLogin() {
   };
 
   return (
-    <Container fluid className="px-0 adminlogin-full-height">
+    <Container fluid className="px-0">
       
       <Col>
         <Image className="header-logo" src={ojala_logo} alt="Ojala Logo" fluid />
@@ -28,7 +29,7 @@ function AdminLogin() {
           {/* Login Form */}
           <Col md={6}>
             <Formik
-              validationSchema={schema}
+              validationSchema={formValidation}
               onSubmit={handleSubmit}
               initialValues={{
                 username: "",
