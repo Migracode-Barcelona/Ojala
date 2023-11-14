@@ -6,9 +6,10 @@ import reportWebVitals from "./reportWebVitals";
 import HomeContainer from "containers/home/HomeContainer";
 import ContactInfoContainer from "pages/contact-form/ContactFormContainer";
 import ErrorPage from "pages/error-page/ErrorPage";
+import AdminLogin from "pages/admin-login/login";
 
 const router = createBrowserRouter([
-	{ path: "/", element: <HomeContainer />, errorElement: <ErrorPage /> },
+	{ path: "/", element: <AdminLogin />, errorElement: <ErrorPage /> },
 	{ path: "contact", element: <ContactInfoContainer /> },
 ]);
 
