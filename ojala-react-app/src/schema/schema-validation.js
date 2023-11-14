@@ -10,22 +10,34 @@ yup.addMethod(yup.string, 'email', function validateEmail(message) {
 	});
   });
 
-const schema = yup
-	.object({
-		firstName: yup.string().required("First name is required.").min(2, (min) => `Write at least ${min.min} characters.`).trim(),
-		lastName: yup.string().required("Last name is required.").min(2, (min) => `Write at least ${min.min} characters.`).trim(),
-		age: yup
-			.number()
-			.typeError("Age must be a number")
-			.integer("Age must be an integer.")
-			.min(18, "You must be 18 or older")
-			.required("Age is required"),
-		email: yup
-			.string()
-			.email("The email must be valid.")
-			.required("An email is required."),
-		issue: yup.string().matches(/app-install|app-mistake|other/, {message:"Select an issue"}).required("Select an issue"),
-	})
-	.required();
+  const schema = (t) =>
+  yup
+    .object()
+    .shape({
+      firstName: yup
+        .string()
+        .required(t("fNameMsg"))
+        .min(2, (min) => t("minChar", { min: min.min }))
+        .trim(),
+      lastName: yup
+        .string()
+        .required(t("lNameMsg"))
+        .min(2, (min) => t("minChar", { min: min.min }))
+        .trim(),
+      age: yup
+        .number()
+        .typeError(t("ageMsg1"))
+        .integer(t("ageMsg2"))
+        .min(18, (min) => t("ageMsg3", { min: min.min }))
+        .required(t("ageMsg4")),
+      email: yup.string().email(t("emailMsg1")).required(t("emailMsg2")),
+      issue: yup
+        .string()
+        .matches(/app-install|app-mistake|other/, {
+          message: t("issueMsg")
+        })
+        .required(t("issueMsg"))
+    })
+    .required();
 
 export default schema;
