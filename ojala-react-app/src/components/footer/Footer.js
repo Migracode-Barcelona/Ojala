@@ -27,7 +27,7 @@ function Footer() {
       <footer
         role="footer"
         style={{ backgroundColor: "#007bb6" }}
-        title="footer tag exists"
+        title="footer"
         className="w-75 pt-4"
       >
         <Row>
