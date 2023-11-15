@@ -4,8 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 import HomeContainer from "containers/home/HomeContainer";
-import ContactInfoContainer from "pages/contact-form/ContactFormContainer";
-import ErrorPage from "pages/error-page/ErrorPage";
+import ContactInfoContainer from "pages/contact/ContactPageContainer";
+import ErrorPage from "pages/error/ErrorPage";
 
 const router = createBrowserRouter([
 	{ path: "/", element: <HomeContainer />, errorElement: <ErrorPage /> },
