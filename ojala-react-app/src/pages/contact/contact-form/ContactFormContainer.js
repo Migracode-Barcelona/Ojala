@@ -27,13 +27,13 @@ function ContactFormContainer({ handleSubmit }) {
 			{({ handleSubmit, handleChange, values, touched, errors }) => (
 				<Form role="form" noValidate onSubmit={handleSubmit}>
 					<Row className="mb-3 gy-2">
-						{inputFieldData.map((input) => (
+						{inputFieldData.map(({id, md, label, type}) => (
 							<ContactFormInput
-								key={input.id}
-								md={input.md}
-								label={t(input.label)}
-								type={input.type}
-								name={input.name}
+								key={id}
+								md={md}
+								label={t(label)}
+								type={type}
+								id={id}
 								values={values}
 								handleChange={handleChange}
 								touched={touched}
@@ -42,7 +42,7 @@ function ContactFormContainer({ handleSubmit }) {
 						))}
 
 						<Form.Group as={Col} md="12" className="gy-4">
-							<Form.Label htmlFor="issue">"Issue"</Form.Label>
+							<Form.Label htmlFor="issue">Issue</Form.Label>
 							<Form.Select
 								id="issue"
 								name="issue"
@@ -50,7 +50,7 @@ function ContactFormContainer({ handleSubmit }) {
 								onChange={handleChange}
 								isInvalid={!touched.issue && !!errors.issue}
 							>
-								<option>{t("issueType")}</option>
+								<option >{t("issueType")}</option>
 								<option value="app-install">{t("installing")}</option>
 								<option value="app-mistake">{t("mistake")}</option>
 								<option value="other">{t("other")}</option>

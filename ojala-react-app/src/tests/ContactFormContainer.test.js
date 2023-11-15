@@ -32,7 +32,7 @@ describe("ContactFormContainer testing", () => {
 		const form = screen.getByRole("form");
 		expect(form).toBeInTheDocument();
 
-		// using the react-i18next library, the label value is also being used for the name value
+		// with the `name` option you can filter the returned elements by their accessible name
 		const firstNameInput = screen.getByRole("textbox", { name: /fName/i });
 		expect(firstNameInput).toBeInTheDocument();
 
@@ -115,11 +115,7 @@ describe("ContactFormContainer testing", () => {
 
 		render(<ContactFormContainer handleSubmit={handleSubmitMock} />);
 
-		// for some reason when the first textarea is typed, it types extra words that result in a different expected result.
-		// So I write, clear and write again
 		const firstNameInput = screen.getByRole("textbox", { name: /fName/i });
-		await user.type(firstNameInput, "Steve");
-		await user.clear(firstNameInput);
 		await user.type(firstNameInput, "Steve");
 
 		const lastNameInput = screen.getByRole("textbox", { name: /lName/i });
