@@ -5,25 +5,27 @@ function ContactFormInput({
 	md,
 	label,
 	type,
-	name,
+	id,
 	values,
 	handleChange,
 	touched,
 	errors,
 }) {
+	// In the context of the Formik library, which is used in this project,
+	// the name prop is crucial. It associates the input field with the corresponding value in the form's state. 
 	return (
 		<Form.Group as={Col} md={md}>
-			<Form.Label htmlFor={name}>{label}</Form.Label>
+			<Form.Label htmlFor={id}>{label}</Form.Label>
 			<Form.Control
-				id={name}
+				id={id}
 				type={type}
-				name={name}
-				value={values[name]}
+				name={id}
+				value={values[id]}
 				onChange={handleChange}
-				isInvalid={touched[name] && !!errors[name]}
+				isInvalid={touched[id] && !!errors[id]}
 			/>
 			<Form.Control.Feedback type="invalid">
-				{errors[name]}
+				{errors[id]}
 			</Form.Control.Feedback>
 		</Form.Group>
 	);
