@@ -6,7 +6,7 @@ import Ratio from "react-bootstrap/Ratio";
 
 function LanguageCard({ image, title, text, direction }) {
     return (
-        <Col xs={12} md={10}>
+        <Col xs={12} md={10} data-testid="language-card">
             <Card className="overflow-auto">
                 <Ratio aspectRatio={150}>
                     <Card.Img src={image} className="object-fit-cover" />
