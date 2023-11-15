@@ -7,14 +7,15 @@ import * as formik from "formik";
 import schema from "schema/schema-validation";
 import inputFieldData from "data/input-field-data";
 import ContactFormInput from "./presentational/ContactFormInput";
+import { useTranslation } from "react-i18next";
 
-function ContactFormContainer({handleSubmit}) {
-
-    const { Formik } = formik;
+function ContactFormContainer({ handleSubmit }) {
+	const { t } = useTranslation();
+	const { Formik } = formik;
 
 	return (
 		<Formik
-			validationSchema={schema}
+			validationSchema={schema(t)}
 			onSubmit={handleSubmit}
 			initialValues={{
 				firstName: "",
@@ -30,7 +31,7 @@ function ContactFormContainer({handleSubmit}) {
 							<ContactFormInput
 								key={input.id}
 								md={input.md}
-								label={input.label}
+								label={t(input.label)}
 								type={input.type}
 								name={input.name}
 								values={values}
@@ -49,12 +50,10 @@ function ContactFormContainer({handleSubmit}) {
 								onChange={handleChange}
 								isInvalid={!touched.issue && !!errors.issue}
 							>
-								<option>Choose the type of issue</option>
-								<option value="app-install">Installing the App</option>
-								<option value="app-mistake">
-									There is a mistake in the App
-								</option>
-								<option value="other">Other issue</option>
+								<option>{t("issueType")}</option>
+								<option value="app-install">{t("installing")}</option>
+								<option value="app-mistake">{t("mistake")}</option>
+								<option value="other">{t("other")}</option>
 							</Form.Select>
 							<Form.Control.Feedback type="invalid">
 								{errors.select}
@@ -63,9 +62,7 @@ function ContactFormContainer({handleSubmit}) {
 					</Row>
 
 					<Container fluid className="w-75 my-4 mb-5 text-center">
-						<Button name="submit" type="submit">
-							Submit form
-						</Button>
+						<Button type="submit">{t("sbmtBtn")}</Button>
 					</Container>
 				</Form>
 			)}
