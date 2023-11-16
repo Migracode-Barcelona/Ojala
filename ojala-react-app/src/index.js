@@ -10,6 +10,8 @@ import i18next from 'i18next';
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
+import AdminLogin from "pages/admin-login/AdminLogin";
+import AdminDashboardContainer from "pages/admin-dashboard/AdminDashboardContainer";
 
 i18next
 	.use(initReactI18next)
@@ -31,6 +33,8 @@ i18next
 const router = createBrowserRouter([
   { path: "/", element: <HomeContainer />, errorElement: <ErrorPage /> },
   { path: "contact", element: <ContactInfoContainer /> },
+  { path: "admin-login", element: <AdminLogin /> },
+  { path: "admin-dashboard", element: <AdminDashboardContainer /> },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
