@@ -9,25 +9,25 @@ import Carousel from "components/carousel/Carousel";
 import Header from "components/header/Header";
 
 function HomeContainer() {
-	const refDownload = useRef(null);
+  const refDownload = useRef(null);
 
-	const handleClickHeaderScrollToDownload = () => {
-		refDownload.current?.scrollIntoView({ behavior: "smooth" });
-	};
+  const handleClickHeaderScrollToDownload = () => {
+    refDownload.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
-	return (
-		<Container fluid className="px-0">
-			<Container fluid className="full-height px-0">
-				<Header />
-				<Hero handleClickHeader={handleClickHeaderScrollToDownload} />
-			</Container>
-			<Description />
-			<FeaturesLeft />
-			<Carousel />
-			<Download refDownload={refDownload} />
-			<Footer />
-		</Container>
-	);
+  return (
+    <Container fluid className="px-0">
+      <Container fluid className="full-height px-0">
+        <Header />
+        <Hero handleClickHeader={handleClickHeaderScrollToDownload} />
+      </Container>
+      <Description />
+      <FeaturesLeft />
+      <Carousel />
+      <Download refDownload={refDownload} />
+      <Footer />
+    </Container>
+  );
 }
 
 export default HomeContainer;

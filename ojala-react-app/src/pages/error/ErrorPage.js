@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import { useRouteError, useNavigate } from "react-router-dom";
 import Image from "react-bootstrap/Image";
-import errorGif from "pages/error-page/fall-error.gif";
+import errorGif from "pages/error/fall-error.gif";
 import React, { useEffect } from "react";
 
 export default function ErrorPage() {
