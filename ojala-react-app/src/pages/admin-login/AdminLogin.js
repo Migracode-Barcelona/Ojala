@@ -3,6 +3,7 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import { Container, Form, Row, Col, Button, Image } from "react-bootstrap";
 import formCover from "assets/form-cover.png";
+import adminLoginGif from "assets/admin-login.gif"
 import ojala_logo from "assets/ojala_logo.png";
 
 
@@ -88,8 +89,8 @@ function AdminLogin() {
             </Formik>
           </Col>
 
-          <Col md={6} style={{ marginTop: "5em"}}>
-            <Image src={formCover} alt="Form Cover" fluid/>
+          <Col md={6} className="d-flex align-items-center">
+            <Image src={adminLoginGif} alt="login animation" fluid/>
           </Col>
         </Row>
       </Container>
