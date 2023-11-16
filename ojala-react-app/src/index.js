@@ -4,12 +4,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 import HomeContainer from "containers/home/HomeContainer";
-import ContactInfoContainer from "pages/contact-form/ContactFormContainer";
-import ErrorPage from "pages/error-page/ErrorPage";
+import ContactInfoContainer from "pages/contact/ContactPageContainer";
+import ErrorPage from "pages/error/ErrorPage";
 import i18next from 'i18next';
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
+import AdminLogin from "pages/admin-login/AdminLogin";
 import AdminDashboardContainer from "pages/admin-dashboard/AdminDashboardContainer";
 
 i18next
@@ -30,15 +31,18 @@ i18next
 });
 
 const router = createBrowserRouter([
-	{ path: "/", element: <AdminDashboardContainer/>, errorElement: <ErrorPage /> },
-	{ path: "contact", element: <ContactInfoContainer /> },
+
+  { path: "/", element: <HomeContainer />, errorElement: <ErrorPage /> },
+  { path: "contact", element: <ContactInfoContainer /> },
+  { path: "admin-login", element: <AdminLogin /> },
+  { path: "admin-dashboard", element: <AdminDashboardContainer /> },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-	<React.StrictMode>
-		<RouterProvider router={router} />
-	</React.StrictMode>
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
