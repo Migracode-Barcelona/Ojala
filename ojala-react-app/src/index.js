@@ -30,7 +30,7 @@ i18next
 });
 
 const router = createBrowserRouter([
-	{ path: "/", element: <HomeContainer/>, errorElement: <ErrorPage /> },
+	{ path: "/", element: <AdminDashboardContainer/>, errorElement: <ErrorPage /> },
 	{ path: "contact", element: <ContactInfoContainer /> },
 ]);
 
