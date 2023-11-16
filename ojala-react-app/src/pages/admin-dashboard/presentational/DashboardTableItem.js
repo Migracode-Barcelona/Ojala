@@ -1,15 +1,14 @@
-function DashboardTableItem({contact}) {
+function DashboardTableItem({ contact }) {
 	return (
-		<tr
-			key={contact.id}
-		>
-			<td>{contact.first_name}</td>
-			<td>{contact.last_name}</td>
-			<td>{contact.email}</td>
-			<td>{contact.issue}</td>
-			<td>{contact.submit_date}</td>
-		</tr>
+	  <tr className="table-item">
+		<td>{contact.first_name}</td>
+		<td>{contact.last_name}</td>
+		<td>{contact.email}</td>
+		<td>{contact.issue}</td>
+		<td>{contact.submit_date}</td>
+	  </tr>
 	);
-}
-
-export default DashboardTableItem;
+  }
+  
+  export default DashboardTableItem;
+  
