@@ -1,21 +1,28 @@
 import React from "react";
 import { Formik } from "formik";
-import * as yup from "yup";
-import { Container, Form, Row, Col, Button, Image } from "react-bootstrap";
-import formCover from "assets/form-cover.png";
+import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+import Image from "react-bootstrap/Image";
 import adminLoginGif from "assets/admin-login.gif"
 import ojala_logo from "assets/ojala_logo.png";
-
-
-const formValidation = yup.object({
-  username: yup.string().required("Username is required"),
-  password: yup.string().min(8, 'Password must be at least 8 characters').required('Password is required'),
-});
+import schema from "schema/admin-login-schema-validation";
+import postAdminLogin from "services/admin-login-service";
+import { useNavigate } from "react-router-dom";
 
 function AdminLogin() {
-  const handleSubmit = (values) => {
-    
-    console.log("Login submitted:", values);
+
+  const navigate = useNavigate();
+  function redirectAfter3Seconds() {
+    setTimeout(function () {
+      navigate("/admin-dashboard", { replace: true });
+    }, 2000);
+  }
+  const handleSubmit = async (values) => {
+    const isAuthenticated = postAdminLogin(values);
+    (await isAuthenticated===true) ? redirectAfter3Seconds() : alert(await isAuthenticated) ;
   };
 
   return (
@@ -30,10 +37,10 @@ function AdminLogin() {
           {/* Login Form */}
           <Col md={6}>
             <Formik
-              validationSchema={formValidation}
+              validationSchema={schema}
               onSubmit={handleSubmit}
               initialValues={{
-                username: "",
+                email: "",
                 password: "",
               }}
             >
@@ -45,19 +52,20 @@ function AdminLogin() {
                       <h1>Welcome back!</h1>
                     </Col>
 
-                    {/* Username Input */}
+                    {/* email Input */}
                     <Col md={12}>
                       <Form.Group>
-                        <Form.Label>Username</Form.Label>
+                        <Form.Label htmlFor="email">Email</Form.Label>
                         <Form.Control
+                          id="email"
                           type="text"
-                          name="username"
-                          value={values.username}
+                          name="email"
+                          value={values.email}
                           onChange={handleChange}
-                          isInvalid={touched.username && !!errors.username}
+                          isInvalid={touched.email && !!errors.email}
                         />
                         <Form.Control.Feedback type="invalid">
-                          {errors.username}
+                          {errors.email}
                         </Form.Control.Feedback>
                       </Form.Group>
                     </Col>
@@ -65,8 +73,9 @@ function AdminLogin() {
                     {/* Password Input */}
                     <Col md={12}>
                       <Form.Group>
-                        <Form.Label>Password</Form.Label>
+                        <Form.Label htmlFor="password">Password</Form.Label>
                         <Form.Control
+                          id="password"
                           type="password"
                           name="password"
                           value={values.password}
