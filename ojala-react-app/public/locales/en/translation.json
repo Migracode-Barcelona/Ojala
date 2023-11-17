@@ -38,6 +38,7 @@
     "lName": "Last name",
     "age": "Age",
     "email": "Email",
+    "issue": "Issue",
     "sbmtBtn": "Submit form",
     "issueType": "Choose the type of issue",
     "installing": "Installing the App",
