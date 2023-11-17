@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import * as formik from "formik";
-import schema from "schema/schema-validation";
+import schema from "schema/contact-form-schema-validation";
 import inputFieldData from "data/input-field-data";
 import ContactFormInput from "./presentational/ContactFormInput";
 import { useTranslation } from "react-i18next";
