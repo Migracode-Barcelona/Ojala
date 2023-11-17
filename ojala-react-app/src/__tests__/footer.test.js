@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import Footer from "components/footer/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomeContainer from "containers/home/HomeContainer";
+import HomeContainer from "pages/home/HomeContainer";
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 
@@ -23,43 +23,43 @@ beforeEach(() => {
 });
 
 describe("Footer testing", () => {
-  let footer;
-  let socialMediaLink;
+	let footer;
+	let socialMediaLink;
 
-  test("Footer is in the component", () => {
-    render(
-      <RouterProvider router={router}>
-        <Footer />
-      </RouterProvider>
-    );
-    footer = screen.getByRole("footer", { name: "footer" });
-    socialMediaLink = screen.getAllByTitle("social media");
-    expect(footer).toBeInTheDocument();
-  });
+	test("Footer is in the component", () => {
+		render(
+			<RouterProvider router={router}>
+				<Footer />
+			</RouterProvider>
+		);
+		footer = screen.getByRole("footer", { name: "footer" });
+		socialMediaLink = screen.getAllByTitle("social media");
+		expect(footer).toBeInTheDocument();
+	});
 
-  test("The footer has the blue color Ojala App", () => {
-    render(
-      <RouterProvider router={router}>
-        <Footer />
-      </RouterProvider>
-    );
-    footer = screen.getByRole("footer", { name: "footer" });
-    socialMediaLink = screen.getAllByTitle("social media");
-    expect(footer).toHaveStyle({
-      backgroundColor: "#007bb6",
-    });
-  });
+	test("The footer has the blue color Ojala App", () => {
+		render(
+			<RouterProvider router={router}>
+				<Footer />
+			</RouterProvider>
+		);
+		footer = screen.getByRole("footer", { name: "footer" });
+		socialMediaLink = screen.getAllByTitle("social media");
+		expect(footer).toHaveStyle({
+			backgroundColor: "#007bb6",
+		});
+	});
 
-  test("All social media links open in a new tab", () => {
-    render(
-      <RouterProvider router={router}>
-        <Footer />
-      </RouterProvider>
-    );
-    footer = screen.getByRole("footer", { name: "footer" });
-    socialMediaLink = screen.getAllByTitle("social media");
-    socialMediaLink.forEach((link) => {
-      expect(link).toHaveAttribute("target", "_blank");
-    });
-  });
+	test("All social media links open in a new tab", () => {
+		render(
+			<RouterProvider router={router}>
+				<Footer />
+			</RouterProvider>
+		);
+		footer = screen.getByRole("footer", { name: "footer" });
+		socialMediaLink = screen.getAllByTitle("social media");
+		socialMediaLink.forEach((link) => {
+			expect(link).toHaveAttribute("target", "_blank");
+		});
+	});
 });

@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import LanguageCard from "./cards/LanguageCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import responsive from "../../utils/responsiveness/responsive";
+import responsive from "./responsive";
 import cardData from "./cards/CardsData";
 
 function TheCarousel() {

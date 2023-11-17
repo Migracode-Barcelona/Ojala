@@ -22,6 +22,10 @@ $display-font-sizes: (
 	1: 5rem,
 );
 
+.sm-text {
+	font-size: $font-size-base * 0.8 !important;
+}
+
 //colors
 $theme-colors: (
 	"light": #ffffff,
@@ -35,7 +39,7 @@ $theme-colors: (
 );
 
 // header image
-.header-logo{
+.header-logo {
 	width: 3.2em;
 }
 
@@ -54,8 +58,16 @@ $theme-colors: (
 	margin: auto; /* Center horizontally within the container */
 }
 
-.description-full-height {
-	min-height: 100vh;
+.percent-85-height {
+	min-height: 85vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.percent-70-height {
+	min-height: 70vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -74,9 +86,6 @@ $theme-colors: (
 	margin-bottom: 0.5em;
 }
 
-// links
-
-
 // Buttons
 .btn {
 	font-size: 20px !important;
@@ -90,8 +99,8 @@ $theme-colors: (
 
 	// Customize the primary button
 	&-primary {
-		background-color: #007bb6,!important;
-		border-color: #007bb6,!important;
+		background-color: #007bb6 !important;
+		border-color: #007bb6 !important;
 		&:hover {
 			background-color: #dd752e !important;
 			border-color: #dd752e !important;
@@ -104,12 +113,12 @@ $theme-colors: (
 	background-color: rgba(255, 255, 255, 0.876);
 }
 .cards-text {
-	font-size: 0.6em;
+	font-size: $font-size-base * 0.6 !important;
 }
 
 //Carousel
 button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
-    background-color: #007bb6;
+	background-color: #007bb6;
 	box-shadow: 0 0 10px white;
 	left: 0;
 
@@ -129,7 +138,7 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
 }
 
 .react-multi-carousel-item {
-    padding-left: 2.5%;
+	padding-left: 2.5%;
 }
 
 // Hero
@@ -149,6 +158,42 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
 
 .copyright {
 	font-size: 14px;
+}
+
+// Media queries
+
+// XXX-Large devices
+@media (min-width: 2400px) {
+	html {
+		font-size: 1.8rem !important;
+	}
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+	html {
+		font-size: 1.2rem;
+	}
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 320px) {
 }
 
 /* import bootstrap to set changes */

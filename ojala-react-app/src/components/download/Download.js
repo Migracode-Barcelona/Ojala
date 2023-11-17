@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 function Download({refDownload}) {
 	const { t } = useTranslation();
 	return (
-		<Container fluid className="my-5">
+		<Container fluid className="percent-70-height ">
 			<Row ref={refDownload}>
 
 				<Col

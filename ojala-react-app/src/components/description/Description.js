@@ -7,14 +7,14 @@ import { useTranslation } from "react-i18next";
 function Description() {
 	const { t } = useTranslation();
 	return (
-		<Container fluid className="description-full-height">
+		<Container fluid className="percent-85-height">
 			<h1 className="display-1 my-4">{t('ojala')}</h1>
 			<Row className="mt-4 mx-5">
 				<Col xs={12} md={3} className="mb-3 text-center">
 					<i className="fas fa-people-arrows icon-description" />
 					<h2>{t('needed')}</h2>
 					<h3 className="small">have faith</h3>
-					<p className="small">
+					<p className="sm-text">
 						{t('neededText')}
 					</p>
 				</Col>
@@ -23,7 +23,7 @@ function Description() {
 					<i className="fas fa-search-location icon-description" />
 					<h2>{t('incontext')}</h2>
 					<h3 className="small">have faithalot</h3>
-					<p className="small">
+					<p className="sm-text">
 						{t('incontextText')}
 					</p>
 				</Col>
@@ -32,7 +32,7 @@ function Description() {
 					<i className="fas fa-hands icon-description" />
 					<h2>{t('inclusive')}</h2>
 					<h3 className="small">wewill doit</h3>
-					<p className="small">
+					<p className="sm-text">
 						{t('inclusiveText')}
 					</p>
 				</Col>
@@ -41,7 +41,7 @@ function Description() {
 					<i className="fas fa-money-bill-alt icon-description" />
 					<h2>{t('free')}</h2>
 					<h3 className="small">letsgo</h3>
-					<p className="small">
+					<p className="sm-text">
 						{t('freeText')}
 					</p>
 				</Col>

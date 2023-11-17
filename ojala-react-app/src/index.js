@@ -3,13 +3,13 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
-import HomeContainer from "containers/home/HomeContainer";
+import HomeContainer from "pages/home/HomeContainer";
 import ContactInfoContainer from "pages/contact/ContactPageContainer";
 import ErrorPage from "pages/error/ErrorPage";
-import i18next from 'i18next';
+import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
-import LanguageDetector from 'i18next-browser-languagedetector';
-import HttpApi from 'i18next-http-backend';
+import LanguageDetector from "i18next-browser-languagedetector";
+import HttpApi from "i18next-http-backend";
 import AdminLogin from "pages/admin-login/AdminLogin";
 import AdminDashboardContainer from "pages/admin-dashboard/AdminDashboardContainer";
 
@@ -18,30 +18,30 @@ i18next
 	.use(LanguageDetector)
 	.use(HttpApi)
 	.init({
-	supportedLngs: ["ar", "en", "es"],
-	fallbackLng: "en",
-	detection: {
-		order: ['cookie', 'htmlTag', 'localStorage', 'path', 'subdomain'],
-		caches: ['cookie']
-	},
-	backend: {
-		loadPath: '/locales/{{lng}}/translation.json',
-	},
-	react: { useSuspense: false }
-});
+		supportedLngs: ["ar", "en", "es"],
+		fallbackLng: "en",
+		detection: {
+			order: ["cookie", "htmlTag", "localStorage", "path", "subdomain"],
+			caches: ["cookie"],
+		},
+		backend: {
+			loadPath: "/locales/{{lng}}/translation.json",
+		},
+		react: { useSuspense: false },
+	});
 
 const router = createBrowserRouter([
-  { path: "/", element: <HomeContainer />, errorElement: <ErrorPage /> },
-  { path: "contact", element: <ContactInfoContainer /> },
-  { path: "admin-login", element: <AdminLogin /> },
-  { path: "admin-dashboard", element: <AdminDashboardContainer /> },
+	{ path: "/", element: <HomeContainer />, errorElement: <ErrorPage /> },
+	{ path: "contact", element: <ContactInfoContainer /> },
+	{ path: "admin-login", element: <AdminLogin /> },
+	{ path: "admin-dashboard", element: <AdminDashboardContainer /> },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+	<React.StrictMode>
+		<RouterProvider router={router} />
+	</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
