@@ -26,7 +26,7 @@ function AdminLogin() {
   };
 
   return (
-    <Container fluid className="px-0">
+    <Container fluid className="my-1">
       
       <Col>
         <Image className="header-logo" src={ojala_logo} alt="Ojala Logo" fluid />

@@ -3,30 +3,28 @@ import fakeContacts from "data/fake-contacts.json";
 import Container from "react-bootstrap/Container";
 import DashboardTable from "./presentational/DashboardTable";
 import HeaderLogo from "./presentational/HeaderLogo";
-import "./AdminDashboard.scss"
+import "./AdminDashboard.scss";
+import getContacts from "services/admin-dashboard-service";
 
 function AdminDashboardContainer() {
 	const [contacts, setContacts] = useState(fakeContacts);
 
 	useEffect(() => {
-		// do a post request to get information from the server
+		getContacts(setContacts);
 	}, []);
 
 	return (
 		<Container fluid>
-      <div className="admin-header">
-        <HeaderLogo isAdmin={true} /> {/* Version of Admin Dashboard */}
-        {/* Others */}
-      </div>
-      {contacts ? (
-        <DashboardTable contacts={contacts} />
-      ) : (
-        <h1 className="loading">Loading, Please wait</h1>
-      )}
-    </Container>
-  
+			<HeaderLogo isAdmin={true} className="my-1" /> {/* Version of Admin Dashboard */}
+			<Container className="my-3">
+				{contacts ? (
+					<DashboardTable contacts={contacts} />
+				) : (
+					<h1 className="loading">Loading, Please wait</h1>
+				)}
+			</Container>
+		</Container>
 	);
 }
 
-export default AdminDashboardContainer;   
-
+export default AdminDashboardContainer;

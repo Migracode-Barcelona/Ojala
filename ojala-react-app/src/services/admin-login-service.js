@@ -1,3 +1,4 @@
+
 export default async function postAdminLogin(adminLoginFormObj) {
     const url = "http://localhost:3001/admin/sign-in";
     try {
@@ -7,9 +8,11 @@ export default async function postAdminLogin(adminLoginFormObj) {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(adminLoginFormObj),
+            credentials: "include",
         });
         
         if (resp.ok) {
+            
             alert("You are in! Redirecting...");
             return true;
         } else {
