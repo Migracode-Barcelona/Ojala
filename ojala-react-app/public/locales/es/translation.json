@@ -38,6 +38,7 @@
     "lName": "Apellido",
     "age": "Edad",
     "email": "Correo electrónico",
+    "issue": "Problema",
     "sbmtBtn": "Enviar formulario",
     "issueType": "Elige el tipo de problema",
     "installing": "Instalando la aplicación",

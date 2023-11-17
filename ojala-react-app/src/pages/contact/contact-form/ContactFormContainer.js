@@ -42,7 +42,7 @@ function ContactFormContainer({ handleSubmit }) {
 						))}
 
 						<Form.Group as={Col} md="12" className="gy-4">
-							<Form.Label htmlFor="issue">Issue</Form.Label>
+							<Form.Label htmlFor="issue">{t("issue")}</Form.Label>
 							<Form.Select
 								id="issue"
 								name="issue"
