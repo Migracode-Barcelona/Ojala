@@ -7,6 +7,7 @@ import Description from "components/description/Description";
 import Download from "components/download/Download";
 import Carousel from "components/carousel/Carousel";
 import Header from "components/header/Header";
+import About from "components/about/About";
 
 function HomeContainer() {
   const refDownload = useRef(null);
@@ -22,6 +23,7 @@ function HomeContainer() {
         <Hero handleClickHeader={handleClickHeaderScrollToDownload} />
       </Container>
       <Description />
+      <About />
       <FeaturesLeft />
       <Carousel />
       <Download refDownload={refDownload} />
