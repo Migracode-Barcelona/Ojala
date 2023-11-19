@@ -54,9 +54,10 @@ function Header() {
 					xs={4}
 					md={2}
 					xl={1}
-					className="text-center d-flex align-self-center"
+					className="text-center d-flex align-items-center align-self-center"
 				>
 					<Image className="header-logo" src={ojala_logo} fluid />
+					<span className="mx-2 header-app-name">¡Ojalá!</span>
 				</Col>
 
 				<Col
@@ -65,7 +66,7 @@ function Header() {
 					xl={11}
 					className="d-flex flex-wrap justify-content-end align-self-center"
 				>
-					<Button className="me-1">
+					<Button className="small-devices-hide me-1">
 						{location.pathname === "/" ? (
 							<Link
 								to={"/contact"}
