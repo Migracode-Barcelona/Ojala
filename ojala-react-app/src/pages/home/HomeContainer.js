@@ -5,7 +5,6 @@ import Hero from "../../components/hero/Hero";
 import { Container } from "react-bootstrap";
 import Description from "components/description/Description";
 import Download from "components/download/Download";
-import Carousel from "components/carousel/Carousel";
 import Header from "components/header/Header";
 import About from "components/about/About";
 
@@ -25,7 +24,6 @@ function HomeContainer() {
       <Description />
       <About />
       <FeaturesLeft />
-      <Carousel />
       <Download refDownload={refDownload} />
       <Footer />
     </Container>
