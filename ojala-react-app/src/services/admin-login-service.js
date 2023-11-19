@@ -1,6 +1,6 @@
 
 async function postAdminLogin(adminLoginFormObj) {
-    const url = "http://localhost:3001/admin/sign-in";
+    const url = "http://localhost:3001/admin/login";
     try {
         const resp = await fetch(url, {
             method: "POST",
