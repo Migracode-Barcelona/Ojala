@@ -8,7 +8,7 @@ function FeaturesLeft() {
 	const { t } = useTranslation();
 
 	return (
-		<Container fluid className="mb-5 pb-4">
+		<Container fluid className="my-5">
 			<Row className="my-auto mx-5">
 				<Col xs={12} md={12} className="align-self-center text-center">
 					<Container fluid className="ms-3">

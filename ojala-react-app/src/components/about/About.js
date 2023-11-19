@@ -6,7 +6,7 @@ import aboutData from "./descriptions/aboutData";
 function About() {
     let isImageFirst = true;
     return (
-        <Container fluid className="percent-85-height">
+        <Container fluid className="percent-85-height my-5">
             {aboutData.map((card) => {
                 const currentProps = {
                     key: card.id,

@@ -7,7 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 
 function TheCarousel() {
 	return (
-		<Container fluid className="my-2 mx-auto">
+		<Container fluid className="mx-auto">
 			<Carousel
 				responsive={responsive}
 				removeArrowOnDeviceType={["tablet", "mobile"]}
