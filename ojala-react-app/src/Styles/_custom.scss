@@ -108,14 +108,6 @@ $theme-colors: (
 	}
 }
 
-// Cards
-.gray-transparent-background {
-	background-color: rgba(255, 255, 255, 0.876);
-}
-.cards-text {
-	font-size: $font-size-base * 0.6 !important;
-}
-
 //Carousel
 button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
 	background-color: #007bb6;
@@ -137,8 +129,8 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
 	}
 }
 
-.react-multi-carousel-item {
-	padding-left: 2.5%;
+.react-multi-carousel-dot--active button {
+    background: #007bb6 !important;
 }
 
 // Hero
