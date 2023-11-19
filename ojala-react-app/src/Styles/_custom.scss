@@ -19,8 +19,12 @@ $h4-font-size: $font-size-base * 0.8;
 
 $display-font-family: $quicksand;
 $display-font-sizes: (
-	1: 5rem,
+	1: 4.4rem,
 );
+
+.header-app-name {
+	font-size: $font-size-base * 1 !important;
+}
 
 .sm-text {
 	font-size: $font-size-base * 0.8 !important;
@@ -40,7 +44,7 @@ $theme-colors: (
 
 // header image
 .header-logo {
-	width: 3.2em;
+	width: 2.7em;
 }
 
 // introduction
@@ -76,8 +80,8 @@ $theme-colors: (
 
 // icons
 .icon-lg {
-	font-size: 1.2rem;
-	padding-right: 0.7rem;
+	font-size: 1.1rem;
+	padding-right: 0.2rem;
 }
 
 .icon-description {
@@ -88,9 +92,9 @@ $theme-colors: (
 
 // Buttons
 .btn {
-	font-size: 20px !important;
-	padding: 5px 14px !important;
-	margin: 5px !important;
+	font-size: 1rem !important;
+	padding: 0.2rem 0.8rem !important;
+	margin: 0.2rem !important;
 	border-radius: 5rem !important;
 
 	&:hover {
@@ -161,6 +165,9 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
 }
 
 // Media queries
+.small-devices-hide {
+	display: none !important;
+}
 
 // XXX-Large devices
 @media (min-width: 2400px) {
@@ -170,7 +177,7 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
 }
 
 // XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
 	html {
 		font-size: 1.2rem;
 	}
@@ -180,20 +187,31 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
 @media (min-width: 1200px) {
 }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
+// Large devices (desktops, 1024px and up)
+@media (min-width: 1024px) {
+	.btn {
+		font-size: 1.4rem !important;
+		padding: 0.3rem 1.4rem !important;
+		margin: 0.5rem !important;
+	}
 }
 
 // Medium devices (tablets, 768px and up)
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+	.header-app-name {
+		font-size: 1.5rem !important;
+	}
+	.small-devices-hide {
+		display: inline !important;
+	}
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (max-width: 576px) {
+// Small devices (landscape phones, 320px and up)
+@media (min-width: 320px) {
 }
 
-// X-Small devices (portrait phones, less than 576px)
-@media (max-width: 320px) {
+// X-Small devices (portrait phones, 0px and up)
+@media (min-width: 0px) {
 }
 
 /* import bootstrap to set changes */

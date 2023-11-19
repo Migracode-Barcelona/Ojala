@@ -17,7 +17,7 @@ function Hero({ handleClickHeader }) {
 				{t('heroText1')} <span className="orange-color">{t('heroText2')}</span>
 				<br></br>{t('heroText3')} <span className="orange-color">{t('heroText4')}</span>
 			</h1>
-			<Button className="my-2" onClick={handleClickHeader}>
+			<Button className="my-4" onClick={handleClickHeader}>
 				{t('start')}
 			</Button>
 		</Container>
