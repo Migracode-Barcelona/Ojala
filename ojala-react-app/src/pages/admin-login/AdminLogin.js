@@ -6,14 +6,13 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
-import adminLoginGif from "assets/admin-login.gif"
+import adminLoginGif from "assets/admin-login.gif";
 import ojala_logo from "assets/ojala_logo.png";
 import schema from "schema/admin-login-schema-validation";
-import {postAdminLogin} from "services/admin-login-service";
+import { postAdminLogin } from "services/admin-login-service";
 import { useNavigate } from "react-router-dom";
 
 function AdminLogin() {
-
   const navigate = useNavigate();
   function redirectAfter3Seconds() {
     setTimeout(function () {
@@ -22,14 +21,20 @@ function AdminLogin() {
   }
   const handleSubmit = async (values) => {
     const isAuthenticated = postAdminLogin(values);
-    (await isAuthenticated===true) ? redirectAfter3Seconds() : alert(await isAuthenticated) ;
+    (await isAuthenticated) === true
+      ? redirectAfter3Seconds()
+      : alert(await isAuthenticated);
   };
 
   return (
     <Container fluid className="my-1">
-      
       <Col>
-        <Image className="header-logo" src={ojala_logo} alt="Ojala Logo" fluid />
+        <Image
+          className="header-logo"
+          src={ojala_logo}
+          alt="Ojala Logo"
+          fluid
+        />
       </Col>
 
       <Container fluid className="my-4 w-75">
@@ -47,7 +52,6 @@ function AdminLogin() {
               {({ handleSubmit, handleChange, values, touched, errors }) => (
                 <Form noValidate onSubmit={handleSubmit}>
                   <Row className="mb-3 gy-2">
-                    
                     <Col md={12}>
                       <h1>Welcome back!</h1>
                     </Col>
@@ -89,7 +93,6 @@ function AdminLogin() {
                     </Col>
                   </Row>
 
-                  
                   <Container fluid className="w-75 my-4 text-center">
                     <Button type="submit">Login</Button>
                   </Container>
@@ -98,8 +101,14 @@ function AdminLogin() {
             </Formik>
           </Col>
 
-          <Col md={6} className="d-flex align-items-center">
-            <Image src={adminLoginGif} alt="login animation" fluid/>
+          <Col md={6} className="d-flex align-items-center px-5">
+            <Image
+              src={adminLoginGif}
+              className="rounded-circle mx-5"
+              style={{ height: "20rem", width: "20rem" }}
+              alt="login animation"
+              fluid
+            />
           </Col>
         </Row>
       </Container>
