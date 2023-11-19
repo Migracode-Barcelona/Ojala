@@ -9,7 +9,7 @@ import Image from "react-bootstrap/Image";
 import adminLoginGif from "assets/admin-login.gif"
 import ojala_logo from "assets/ojala_logo.png";
 import schema from "schema/admin-login-schema-validation";
-import postAdminLogin from "services/admin-login-service";
+import {postAdminLogin} from "services/admin-login-service";
 import { useNavigate } from "react-router-dom";
 
 function AdminLogin() {

@@ -1,5 +1,5 @@
 
-export default async function postAdminLogin(adminLoginFormObj) {
+async function postAdminLogin(adminLoginFormObj) {
     const url = "http://localhost:3001/admin/sign-in";
     try {
         const resp = await fetch(url, {
@@ -28,3 +28,13 @@ export default async function postAdminLogin(adminLoginFormObj) {
         return message;
     }
 }
+
+async function getAdminLogout(adminLoginFormObj) {
+    
+
+}
+
+module.exports = {
+    postAdminLogin,
+    getAdminLogout
+};
