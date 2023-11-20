@@ -14,7 +14,7 @@ function TheCarousel() {
 				showDots={true}
 				infinite={true}
 				autoPlay={true}
-				autoPlaySpeed={4000}
+				autoPlaySpeed={3500}
 			>
 				<Row fluid className="my-5 mx-5 text-center">
 					<h2 className="text-center">"The idea of the App is great. Hopefully it can be used to teach language as a tool for integration."</h2>
