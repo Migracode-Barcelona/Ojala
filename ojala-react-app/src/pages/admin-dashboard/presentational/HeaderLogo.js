@@ -18,9 +18,10 @@ function HeaderLogo({ isAdmin }) {
 				<span className="header-text">Welcome Back Admin!</span>
 			</Container>
 			<Container fluid>
+			
 				{isAdmin && (
 					<Container className="search-bar-container">
-						<InputGroup className="search-bar">
+						<InputGroup className="search-bar text-center">
 							<FormControl
 								placeholder="Search"
 								aria-label="Search"
