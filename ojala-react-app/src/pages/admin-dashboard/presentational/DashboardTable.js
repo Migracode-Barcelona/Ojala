@@ -3,9 +3,13 @@ import { useTable } from 'react-table';
 import DashboardTableItem from './DashboardTableItem';
 import 'pages/admin-dashboard/AdminDashboard.scss';
 
-function DashboardTable({ contacts }) {
+function DashboardTable({ contacts, deleteContact }) {
   const columns = React.useMemo(
     () => [
+      {
+        Header: 'id',
+        accessor: 'id', 
+      },
       {
         Header: 'First Name',
         accessor: 'first_name', 
@@ -53,7 +57,7 @@ function DashboardTable({ contacts }) {
         <tbody {...getTableBodyProps()}>
           {rows.map((row) => {
             prepareRow(row);
-            return <DashboardTableItem key={row.id} contact={row.original} />;
+            return <DashboardTableItem key={row.id} contact={row.original} deleteContact={deleteContact} />;
           })}
         </tbody>
       </table>

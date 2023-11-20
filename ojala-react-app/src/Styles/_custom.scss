@@ -184,11 +184,7 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
 
 // Large devices (desktops, 1024px and up)
 @media (min-width: 1024px) {
-	.btn {
-		font-size: 1.4rem !important;
-		padding: 0.3rem 1.4rem !important;
-		margin: 0.5rem !important;
-	}
+	
 }
 
 // Medium devices (tablets, 768px and up)
@@ -198,6 +194,11 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
 	}
 	.small-devices-hide {
 		display: inline !important;
+	}
+	.btn {
+		font-size: 1.3rem !important;
+		padding: 0.3rem 1.4rem !important;
+		margin: 0.5rem !important;
 	}
 }
 
