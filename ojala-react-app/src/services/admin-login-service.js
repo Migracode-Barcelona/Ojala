@@ -1,4 +1,3 @@
-
 async function postAdminLogin(adminLoginFormObj) {
     const url = "http://localhost:3001/admin/login";
     try {
@@ -19,7 +18,7 @@ async function postAdminLogin(adminLoginFormObj) {
             const respData = await resp.json();
             throw new Error(respData.error);
         }
-
+  
     } catch (err) {
         let message = err;
         if (err.name === "TypeError" && err.message.includes("Failed to fetch")) {
@@ -27,14 +26,31 @@ async function postAdminLogin(adminLoginFormObj) {
         }
         return message;
     }
-}
-
-async function getAdminLogout(adminLoginFormObj) {
+  }
+  
+  async function getAdminLogout() {
+    const url = "http://localhost:3001/admin/logout";
     
-
-}
-
-module.exports = {
+    try {
+      const resp = await fetch(url, {
+        method: "GET",
+        credentials: "include",
+      });
+  
+      if (resp.ok) {
+        alert("Logout successful, Bravo Admin!"); 
+        return true;
+      } else {
+        const respData = await resp.json();
+        throw new Error(respData.error);
+      }
+    } catch (error) {
+      console.error('Logout error:', error);
+      throw error; 
+    }
+  }
+  
+  module.exports = {
     postAdminLogin,
     getAdminLogout
-};
+  };
