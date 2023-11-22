@@ -3,7 +3,7 @@ import { useTable } from 'react-table';
 import DashboardTableItem from './DashboardTableItem';
 import 'pages/admin-dashboard/AdminDashboard.scss';
 
-function DashboardTable({ contacts, deleteContact }) {
+function DashboardTable({ contacts, handleDeleteContact }) {
   const columns = React.useMemo(
     () => [
       {
@@ -57,7 +57,7 @@ function DashboardTable({ contacts, deleteContact }) {
         <tbody {...getTableBodyProps()}>
           {rows.map((row) => {
             prepareRow(row);
-            return <DashboardTableItem key={row.id} contact={row.original} deleteContact={deleteContact} />;
+            return <DashboardTableItem key={row.id} contact={row.original} handleDeleteContact={handleDeleteContact} />;
           })}
         </tbody>
       </table>

@@ -1,5 +1,5 @@
 async function getContacts(setContacts) {
-	const url = "http://localhost:3001/contact/";
+	const url = `${process.env.REACT_APP_API_URL}/contact/`;
 
 	try {
 		const resp = await fetch(url, {
@@ -24,7 +24,7 @@ async function getContacts(setContacts) {
 }
 
 async function deleteContact(contactId) {
-	const url = "http://localhost:3001/contact/";
+	const url = `${process.env.REACT_APP_API_URL}/contact`;
 
 	try {
 		const resp = await fetch(`${url}/${contactId}`, {

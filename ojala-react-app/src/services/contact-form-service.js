@@ -1,6 +1,5 @@
-
 export default async function postContactForm(contactFormObj) {
-    const url = "http://localhost:3001/contact";
+    const url = `${process.env.REACT_APP_API_URL}/contact`;
     try {
         const resp = await fetch(url, {
             method: "POST",

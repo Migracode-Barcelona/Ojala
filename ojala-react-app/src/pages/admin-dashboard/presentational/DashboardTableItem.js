@@ -1,4 +1,4 @@
-function DashboardTableItem({ contact, deleteContact }) {
+function DashboardTableItem({ contact, handleDeleteContact }) {
 	return (
 	  <tr className="table-item">
 		<td>{contact.id}</td>
@@ -7,7 +7,7 @@ function DashboardTableItem({ contact, deleteContact }) {
 		<td>{contact.email}</td>
 		<td>{contact.issue}</td>
 		<td>{contact.submit_date}</td>
-		<td><i onClick={() => deleteContact(contact.id)} className="fa-solid fa-delete-left"></i></td>
+		<td><i onClick={() => handleDeleteContact(contact.id)} className="fa-solid fa-delete-left"></i></td>
 	  </tr>
 	);
   }

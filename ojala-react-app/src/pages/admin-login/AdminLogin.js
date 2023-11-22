@@ -14,15 +14,15 @@ import { useNavigate } from "react-router-dom";
 
 function AdminLogin() {
   const navigate = useNavigate();
-  function redirectAfter3Seconds() {
+  function redirectAfter1Sec() {
     setTimeout(function () {
       navigate("/admin-dashboard", { replace: true });
-    }, 2000);
+    }, 1000);
   }
   const handleSubmit = async (values) => {
     const isAuthenticated = postAdminLogin(values);
     (await isAuthenticated) === true
-      ? redirectAfter3Seconds()
+      ? redirectAfter1Sec()
       : alert(await isAuthenticated);
   };
 
@@ -53,7 +53,7 @@ function AdminLogin() {
                 <Form noValidate onSubmit={handleSubmit}>
                   <Row className="mb-3 gy-2">
                     <Col md={12}>
-                      <h1>Welcome back!</h1>
+                      <h1>Admin Dashboard Login</h1>
                     </Col>
 
                     {/* email Input */}
@@ -101,11 +101,10 @@ function AdminLogin() {
             </Formik>
           </Col>
 
-          <Col md={6} className="d-flex align-items-center px-5">
+          <Col md={6} className="d-flex align-items-center justify-content-center px-5">
             <Image
               src={adminLoginGif}
               className="rounded-circle mx-5"
-              style={{ height: "20rem", width: "20rem" }}
               alt="login animation"
               fluid
             />

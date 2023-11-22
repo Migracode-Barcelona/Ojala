@@ -1,5 +1,5 @@
 async function postAdminLogin(adminLoginFormObj) {
-    const url = "http://localhost:3001/admin/login";
+    const url = `${process.env.REACT_APP_API_URL}/admin/login`;
     try {
         const resp = await fetch(url, {
             method: "POST",
@@ -29,7 +29,7 @@ async function postAdminLogin(adminLoginFormObj) {
   }
   
   async function getAdminLogout() {
-    const url = "http://localhost:3001/admin/logout";
+    const url = `${process.env.REACT_APP_API_URL}/admin/logout`;
     
     try {
       const resp = await fetch(url, {
@@ -39,7 +39,7 @@ async function postAdminLogin(adminLoginFormObj) {
   
       if (resp.ok) {
         alert("Logout successful, Bravo Admin!"); 
-        return true;
+        return "logout";
       } else {
         const respData = await resp.json();
         throw new Error(respData.error);
