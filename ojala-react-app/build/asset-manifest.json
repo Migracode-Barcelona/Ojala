@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.77c119d0.css",
+    "main.js": "/static/js/main.96259846.js",
+    "static/js/496.0ce80a57.chunk.js": "/static/js/496.0ce80a57.chunk.js",
+    "static/media/admin-login.gif": "/static/media/admin-login.e1c58ab27f7758c1db93.gif",
+    "static/media/fall-error.gif": "/static/media/fall-error.9158ca5ae7d9947ff641.gif",
+    "static/media/ojala_app-phone_mockup.svg": "/static/media/ojala_app-phone_mockup.f0b9f15a6c8deb7918a3380211850d9e.svg",
+    "static/media/supported-languages.png": "/static/media/supported-languages.1d7ae7b607ab4eb69fcd.png",
+    "static/media/incontext-description.png": "/static/media/incontext-description.911652af11745c694557.png",
+    "static/media/audio-visual.png": "/static/media/audio-visual.0a50f11b1aac2115680b.png",
+    "static/media/ojala-header-image.jpg": "/static/media/ojala-header-image.f8b8800aa42b3022c365.jpg",
+    "static/media/form-cover.png": "/static/media/form-cover.d666725829b50f81c346.png",
+    "static/media/ojala_logo.png": "/static/media/ojala_logo.4f998506d405a6377e9c.png",
+    "static/media/yery-sorry-baby.m4a": "/static/media/yery-sorry-baby.7711d78956cc14bb1e3a.m4a",
+    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
+    "static/media/google_play-logo.svg": "/static/media/google_play-logo.af01610307e874da96636cb6d67a2f9a.svg",
+    "index.html": "/index.html",
+    "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.77c119d0.css.map": "/static/css/main.77c119d0.css.map",
+    "main.96259846.js.map": "/static/js/main.96259846.js.map",
+    "496.0ce80a57.chunk.js.map": "/static/js/496.0ce80a57.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77c119d0.css",
+    "static/js/main.96259846.js"
+  ]
+}
