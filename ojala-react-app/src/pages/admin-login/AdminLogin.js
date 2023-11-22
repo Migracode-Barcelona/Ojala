@@ -50,7 +50,7 @@ function AdminLogin() {
               }}
             >
               {({ handleSubmit, handleChange, values, touched, errors }) => (
-                <Form noValidate onSubmit={handleSubmit}>
+                <Form role="form" noValidate onSubmit={handleSubmit}>
                   <Row className="mb-3 gy-2">
                     <Col md={12}>
                       <h1>Admin Dashboard Login</h1>
@@ -67,6 +67,7 @@ function AdminLogin() {
                           value={values.email}
                           onChange={handleChange}
                           isInvalid={touched.email && !!errors.email}
+                          autoComplete="on"
                         />
                         <Form.Control.Feedback type="invalid">
                           {errors.email}
@@ -85,6 +86,7 @@ function AdminLogin() {
                           value={values.password}
                           onChange={handleChange}
                           isInvalid={touched.password && !!errors.password}
+                          autoComplete="on"
                         />
                         <Form.Control.Feedback type="invalid">
                           {errors.password}

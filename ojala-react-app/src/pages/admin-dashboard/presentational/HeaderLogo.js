@@ -29,10 +29,10 @@ function HeaderLogo({ isAdmin, handleLogout }) {
 					<div className="d-flex align-items-center">
 						<InputGroup className="search-bar">
 							<FormControl
+								name="search"
 								placeholder="Search"
 								aria-label="Search"
-								aria-describedby="basic-addon2"
-                className="rounded"
+								className="rounded"
 							/>
 							<Button variant="primary" id="button-addon2" className="ms-3">
 								Search

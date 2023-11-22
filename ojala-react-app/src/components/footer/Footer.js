@@ -24,7 +24,7 @@ function Footer() {
       className="bg-primary text-white d-flex align-items-center justify-content-center"
     >
       <footer
-        role="footer"
+        role="contentinfo"
         style={{ backgroundColor: "#007bb6" }}
         title="footer"
         className="w-75 pt-4"
