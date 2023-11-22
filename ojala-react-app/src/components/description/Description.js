@@ -2,48 +2,49 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import { useTranslation } from "react-i18next";
 
 function Description() {
+	const { t } = useTranslation();
 	return (
-		<Container fluid className="description-full-height">
-			<h1 className="display-1 my-4">¡Ojalá! is . . .</h1>
-			<Row className="mt-4 mx-5">
-				<Col xs={12} md={3} className="mb-3 text-center">
-					<i className="fas fa-people-arrows icon-description" />
-					<h2>Needed</h2>
-					<h3 className="small">have faith</h3>
-					<p className="small">
-						Other apps don’t include minority languages like Wolof and Darija.
-					</p>
+		<Container fluid className="percent-85-height">
+			<h1 className="display-1 my-1">{t("ojala")}</h1>
+			<Row className="mt-1 mx-2 gx-5 gy-5">
+				<Col xs={12} md={6} xl={3} className="text-center">
+					<Card className="border border-secondary shadow-sm p-3 h-100">
+						<i className="fas fa-people-arrows icon-description" />
+						<h2>{t("needed")}</h2>
+						<h3 className="small">havefaith</h3>
+						<p className="w-75 mx-auto">{t("neededText")}</p>
+					</Card>
 				</Col>
 
-				<Col xs={12} md={3} className="mb-3 text-center">
-					<i className="fas fa-search-location icon-description" />
-					<h2>In Context</h2>
-					<h3 className="small">have faithalot</h3>
-					<p className="small">
-						Each unit fits the language needs of people on the move on arrival
-						in Spain.
-					</p>
+				<Col xs={12} md={6} xl={3} className="text-center">
+					<Card className="border border-secondary shadow-sm p-3 h-100">
+						<i className="fas fa-search-location icon-description" />
+						<h2>{t("incontext")}</h2>
+						<h3 className="small">hav sfaithalot</h3>
+						<p className="w-75 mx-auto">{t("incontextText")}</p>
+					</Card>
 				</Col>
 
-				<Col xs={12} md={3} className="mb-3 text-center">
-					<i className="fas fa-hands icon-description" />
-					<h2>Inclusive</h2>
-					<h3 className="small">wewill doit</h3>
-					<p className="small">
-						Audio-visually designed so people without written language can also
-						learn.
-					</p>
+				<Col xs={12} md={6} xl={3} className="text-center">
+					<Card className="border border-secondary shadow-sm p-3 h-100">
+						<i className="fas fa-hands icon-description" />
+						<h2>{t("inclusive")}</h2>
+						<h3 className="small">wewilldoit</h3>
+						<p className="w-75 mx-auto">{t("inclusiveText")}</p>
+					</Card>
 				</Col>
 
-				<Col xs={12} md={3} className="mb-3 text-center">
-					<i className="fas fa-money-bill-alt icon-description" />
-					<h2>Free</h2>
-					<h3 className="small">letsgo</h3>
-					<p className="small">
-						We believe education is a right, not a privilege.
-					</p>
+				<Col xs={12} md={6} xl={3} className="text-center">
+					<Card className="border border-secondary shadow-sm p-3 h-100">
+						<i className="fas fa-money-bill-alt icon-description" />
+						<h2>{t("free")}</h2>
+						<h3 className="small">letsgo</h3>
+						<p className="w-75 mx-auto">{t("freeText")}</p>
+					</Card>
 				</Col>
 			</Row>
 		</Container>

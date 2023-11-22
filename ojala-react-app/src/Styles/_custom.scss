@@ -12,15 +12,23 @@ h3 {
 	color: #dd732c !important;
 	margin-top: -0.8rem !important;
 }
-$h1-font-size: $font-size-base * 2.3;
+$h1-font-size: $font-size-base * 2;
 $h2-font-size: $font-size-base * 1.1;
 $h3-font-size: $font-size-base * 1.5;
 $h4-font-size: $font-size-base * 0.8;
 
 $display-font-family: $quicksand;
 $display-font-sizes: (
-	1: 5rem,
+	1: 4.4rem,
 );
+
+.header-app-name {
+	font-size: $font-size-base * 1 !important;
+}
+
+.sm-text {
+	font-size: $font-size-base * 0.8 !important;
+}
 
 //colors
 $theme-colors: (
@@ -34,9 +42,12 @@ $theme-colors: (
 	"danger": #ff0004,
 );
 
+//cards
+
+
 // header image
-.header-logo{
-	width: 3.2em;
+.header-logo {
+	width: 2.7em;
 }
 
 // introduction
@@ -54,8 +65,16 @@ $theme-colors: (
 	margin: auto; /* Center horizontally within the container */
 }
 
-.description-full-height {
-	min-height: 100vh;
+.percent-85-height {
+	min-height: 75vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.percent-70-height {
+	min-height: 50vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -64,8 +83,8 @@ $theme-colors: (
 
 // icons
 .icon-lg {
-	font-size: 1.2rem;
-	padding-right: 0.7rem;
+	font-size: 1.1rem;
+	padding-right: 0.2rem;
 }
 
 .icon-description {
@@ -74,14 +93,11 @@ $theme-colors: (
 	margin-bottom: 0.5em;
 }
 
-// links
-
-
 // Buttons
 .btn {
-	font-size: 20px !important;
-	padding: 5px 14px !important;
-	margin: 5px !important;
+	font-size: 1rem !important;
+	padding: 0.2rem 0.8rem !important;
+	margin: 0.2rem !important;
 	border-radius: 5rem !important;
 
 	&:hover {
@@ -90,8 +106,8 @@ $theme-colors: (
 
 	// Customize the primary button
 	&-primary {
-		background-color: #007bb6,!important;
-		border-color: #007bb6,!important;
+		background-color: #007bb6 !important;
+		border-color: #007bb6 !important;
 		&:hover {
 			background-color: #dd752e !important;
 			border-color: #dd752e !important;
@@ -99,17 +115,9 @@ $theme-colors: (
 	}
 }
 
-// Cards
-.gray-transparent-background {
-	background-color: rgba(255, 255, 255, 0.876);
-}
-.cards-text {
-	font-size: 0.6em;
-}
-
 //Carousel
 button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
-    background-color: #007bb6;
+	background-color: #007bb6;
 	box-shadow: 0 0 10px white;
 	left: 0;
 
@@ -128,8 +136,8 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
 	}
 }
 
-.react-multi-carousel-item {
-    padding-left: 2.5%;
+.react-multi-carousel-dot--active button {
+    background: #007bb6 !important;
 }
 
 // Hero
@@ -149,6 +157,57 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
 
 .copyright {
 	font-size: 14px;
+}
+
+// Media queries
+.small-devices-hide {
+	display: none !important;
+}
+
+// XXX-Large devices
+@media (min-width: 2400px) {
+	html {
+		font-size: 1.8rem !important;
+	}
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1440px) {
+	html {
+		font-size: 1.2rem;
+	}
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// Large devices (desktops, 1024px and up)
+@media (min-width: 1024px) {
+	
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.header-app-name {
+		font-size: 1.5rem !important;
+	}
+	.small-devices-hide {
+		display: inline !important;
+	}
+	.btn {
+		font-size: 1.3rem !important;
+		padding: 0.3rem 1.4rem !important;
+		margin: 0.5rem !important;
+	}
+}
+
+// Small devices (landscape phones, 320px and up)
+@media (min-width: 320px) {
+}
+
+// X-Small devices (portrait phones, 0px and up)
+@media (min-width: 0px) {
 }
 
 /* import bootstrap to set changes */

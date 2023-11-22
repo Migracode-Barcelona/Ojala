@@ -1,31 +1,27 @@
 const inputFieldData = [
     {
-        id: 1,
+        id: "firstName",
         md: "6",
-        label: "First name",
-        type: "text",
-        name: "firstName",
+        label: "fName",
+        type: "text"
     },
     {
-        id: 2,
+        id: "lastName",
         md: "6",
-        label: "Last name",
-        type: "text",
-        name: "lastName",
+        label: "lName",
+        type: "text"
     },
     {
-        id: 3,
+        id: "age",
         md: "4",
-        label: "Age",
-        type: "number",
-        name: "age",
+        label: "age",
+        type: "number"
     },
     {
-        id: 4,
+        id: "email",
         md: "8",
-        label: "Email",
-        type: "text",
-        name: "email",
+        label: "email",
+        type: "text"
     },
 
 ]
