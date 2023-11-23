@@ -16,14 +16,14 @@ function TheCarousel() {
 				autoPlay={true}
 				autoPlaySpeed={3500}
 			>
-				<Row  className="my-5 mx-5 text-center">
+				<Row  className="my-5 mx-1 text-center">
 					<h2 className="text-center">"The idea of the App is great. Hopefully it can be used to teach language as a tool for integration."</h2>
 				</Row>
-				<Row  className="my-5 mx-5 text-center">
+				<Row  className="my-5 mx-1 text-center">
 
 					<h2 className="text-center">"A very useful and necessary presentation."</h2>
 				</Row>
-				<Row  className="my-5 mx-5 text-center">
+				<Row  className="my-5 mx-1 text-center">
 					<h2 className="text-center">"Una gran idea proveniente de muy buenos profesionales de la lengua. ¡Espero que ayude a muchos!"</h2>
 
 				</Row>

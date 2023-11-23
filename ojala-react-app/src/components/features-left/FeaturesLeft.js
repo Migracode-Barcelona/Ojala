@@ -11,9 +11,9 @@ function FeaturesLeft() {
 		<Container fluid className="my-5">
 			<Row className="my-auto mx-5">
 				<Col xs={12} md={12} className="align-self-center text-center">
-					<Container fluid className="ms-3">
+					<Container fluid>
                         <h1>{t("feedback")}</h1>
-                        <h3 className="small">awesomeLANGUAGEfdsfSawe       someLUAawesomeLANGUAG</h3>
+                        <h3 className="small">awesomewesomeUAG</h3>
                     </Container>
 				</Col>
 				

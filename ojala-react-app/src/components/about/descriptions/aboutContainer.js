@@ -35,7 +35,7 @@ function AboutContainer({ image, text, isImageFirst }) {
         <Container fluid className="percent-85-height">
             <Row className="my-5 mx-5">
                 {isImageFirst ? (
-                    <Col xs={12} md={6} className="mb-3 text-center">
+                    <Col xs={12} md={6} className="mb-4 text-center">
                         <motion.div {...animationProps}>
                             <Image src={image} fluid className="mx-auto w-50" />
                         </motion.div>
@@ -49,7 +49,7 @@ function AboutContainer({ image, text, isImageFirst }) {
                 )}
 
                 {!isImageFirst ? (
-                    <Col xs={12} md={6} className="mb-3 text-center">
+                    <Col xs={12} md={6} className="mb-4 text-center">
                         <motion.div {...animationProps}>
                             <Image src={image} fluid className="mx-auto w-50" />
                         </motion.div>
