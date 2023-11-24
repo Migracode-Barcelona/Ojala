@@ -8,12 +8,12 @@ function FeaturesLeft() {
 	const { t } = useTranslation();
 
 	return (
-		<Container fluid className="my-5">
-			<Row className="my-auto mx-5">
+		<Container fluid className="my-5 w-75">
+			<Row className="my-auto">
 				<Col xs={12} md={12} className="align-self-center text-center">
 					<Container fluid>
-                        <h1>{t("feedback")}</h1>
-                        <h3 className="small">awesomewesomeUAG</h3>
+                        <h1 className="display-1">{t("feedback")}</h1>
+                        <h3 className="small">awesomewesomeUAGawesome</h3>
                     </Container>
 				</Col>
 				
