@@ -202,6 +202,12 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
 
 // Large devices (desktops, 1024px and up)
 @media (min-width: 1024px) {
+	.display-1 {
+		font-size: 4rem !important ;
+	}
+	h1 {
+		font-size: $font-size-base * 2.1 !important;
+	}
 }
 
 // X-Large devices (large desktops, 1200px and up)
@@ -210,7 +216,7 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
 		font-size: 4.1rem !important ;
 	}
 	h1 {
-		font-size: $font-size-base * 2.4 !important;
+		font-size: $font-size-base * 2.3 !important;
 	}
 }
 
@@ -218,6 +224,12 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
 @media (min-width: 1440px) {
 	html {
 		font-size: 1.2rem;
+	}
+	.display-1 {
+		font-size: 4.1rem !important ;
+	}
+	h1 {
+		font-size: $font-size-base * 2.4 !important;
 	}
 }
 
