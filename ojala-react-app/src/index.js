@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.scss";
@@ -12,6 +12,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import HttpApi from "i18next-http-backend";
 import AdminLogin from "pages/admin-login/AdminLogin";
 import AdminDashboardContainer from "pages/admin-dashboard/AdminDashboardContainer";
+import loading from "./assets/loading.gif";
 
 i18next
 	.use(initReactI18next)
@@ -27,7 +28,6 @@ i18next
 		backend: {
 			loadPath: "/locales/{{lng}}/translation.json",
 		},
-		react: { useSuspense: false },
 	});
 
 const router = createBrowserRouter([
@@ -37,11 +37,19 @@ const router = createBrowserRouter([
 	{ path: "admin-dashboard", element: <AdminDashboardContainer /> },
 ]);
 
+const loadingMarkup = (
+	<div className="text-center">
+		<img className="mx-auto" src={loading} alt="loading" />
+	</div>
+)
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-	<React.StrictMode>
-		<RouterProvider router={router} />
-	</React.StrictMode>
+	<Suspense fallback={loadingMarkup}>
+		<React.StrictMode>
+			<RouterProvider router={router} />
+		</React.StrictMode>
+	</Suspense>,
 );
 
 // If you want to start measuring performance in your app, pass a function
