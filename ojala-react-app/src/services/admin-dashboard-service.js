@@ -47,7 +47,7 @@ async function deleteContact(contactId) {
 	}
 }
 
-module.exports = {
+export {
 	getContacts,
 	deleteContact,
 };

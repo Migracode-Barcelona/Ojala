@@ -50,7 +50,7 @@ async function postAdminLogin(adminLoginFormObj) {
     }
   }
   
-  module.exports = {
+  export {
     postAdminLogin,
     getAdminLogout
   };
