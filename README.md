@@ -67,7 +67,7 @@ If you'd like to contribute to the development of the Ojalá landing page, pleas
 - Make your changes.
 - Test your changes to ensure they work as expected.
 - Commit your changes: `git commit -m "Add feat/fix"`
-- Push your branch: `git push origin feature/feat-name`
+- Push your branch: `git push origin feat/feat-name`
 - Create a Pull Request to the `main` branch of this repository.
 
 ## License:
