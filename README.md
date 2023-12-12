@@ -19,12 +19,8 @@ Click the link 👉[Ojala](https://ojala.migracode.org/).
 
 Before you begin, ensure you have met the following requirements:
 
-- [Node.js](https://nodejs.org/) installed on your local machine.
 - A code editor of your choice (e.g., Visual Studio Code).
-- Create an `.env` file in the `ojala-react-app` directory. The backend will run in the port `3001`, you must specify the port adding the following value to the `.env` file:
-```env
-REACT_APP_API_URL=http://localhost:3001
-```
+- [Node.js](https://nodejs.org/) installed on your local machine.
 
 ### Installation
 
@@ -39,6 +35,10 @@ REACT_APP_API_URL=http://localhost:3001
 3. Install project dependencies:
    ```bash
    npm install
+   ```
+4. Create an `.env` file in the `ojala-react-app` directory. The backend will run in the port `3001`, you must specify the port adding the following value to the `.env` file:
+   ```env
+   REACT_APP_API_URL=http://localhost:3001
    ```
 
 ### Usage
@@ -56,6 +56,7 @@ REACT_APP_API_URL=http://localhost:3001
 
 > [!NOTE]   
 > Remember to also run the backend repo with the postgreSQL database running. Read the backend readme 🤓.
+> Go to the backend repo 👉https://github.com/armincano/ojala-backend.git
 
 ## Contributing Guidelines
 
